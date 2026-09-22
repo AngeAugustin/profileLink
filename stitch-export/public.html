@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "outline": "#747686", "on-primary-fixed-variant": "#0039b5", "primary-fixed-dim": "#b7c4ff", "on-primary": "#ffffff", "on-surface-variant": "#434655", "surface-variant": "#e0e3e5", "tertiary": "#7c2900", "tertiary-container": "#a33900", "surface-tint": "#2151da", "surface-container-low": "#f2f4f6", "primary": "#0037b0", "on-background": "#191c1e", "surface-container-lowest": "#ffffff", "inverse-primary": "#b7c4ff", "on-secondary": "#ffffff", "on-tertiary-fixed-variant": "#7f2b00", "inverse-surface": "#2d3133", "on-tertiary": "#ffffff", "secondary": "#565e74", "surface-container": "#eceef0", "background": "#f7f9fb", "on-secondary-container": "#5c647a", "tertiary-fixed-dim": "#ffb599", "secondary-fixed-dim": "#bec6e0", "on-error": "#ffffff", "on-primary-container": "#cad3ff", "on-surface": "#191c1e", "surface-bright": "#f7f9fb", "outline-variant": "#c4c5d7", "on-primary-fixed": "#001551", "surface-dim": "#d8dadc", "on-secondary-fixed-variant": "#3f465c", "on-tertiary-container": "#ffc9b6", "primary-fixed": "#dce1ff", "surface-container-high": "#e6e8ea", "surface": "#f7f9fb", "surface-container-highest": "#e0e3e5", "primary-container": "#1d4ed8", "secondary-fixed": "#dae2fd", "secondary-container": "#dae2fd", "on-secondary-fixed": "#131b2e", "error-container": "#ffdad6", "error": "#ba1a1a", "on-error-container": "#93000a", "inverse-on-surface": "#eff1f3", "on-tertiary-fixed": "#370e00", "tertiary-fixed": "#ffdbce" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "space-xl": "2.5rem", "gutter": "1.5rem", "gutter-mobile": "1rem", "margin": "2rem", "margin-mobile": "1rem", "space-lg": "1.5rem", "space-md": "1rem", "space-sm": "0.5rem" }, "fontFamily": { "body-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "code-sm": ["JetBrains Mono"], "headline-xl-mobile": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"] }, "fontSize": { "body-md": ["0.9375rem", { "lineHeight": "1.5rem", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-lg": ["1.125rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.005em", "fontWeight": "400" }], "display-lg": ["3.5rem", { "lineHeight": "4rem", "letterSpacing": "-0.03em", "fontWeight": "800" }], "headline-xl": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-md": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0.01em", "fontWeight": "600" }], "label-sm": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.025em", "fontWeight": "600" }], "code-sm": ["0.8125rem", { "lineHeight": "1.25rem", "letterSpacing": "-0.01em", "fontWeight": "500" }], "headline-xl-mobile": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.015em", "fontWeight": "700" }], "display-lg-mobile": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.025em", "fontWeight": "800" }], "body-sm": ["0.8125rem", { "lineHeight": "1.25rem", "letterSpacing": "0.005em", "fontWeight": "400" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-[0_1px_8px_rgba(15,23,42,0.04)]"><div class="h-16 max-w-7xl mx-auto px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><a class="flex items-center gap-space-sm" data-path="accueil" href="#"><img alt="ProfileLink Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XR_gSuj80TnlTcmnzOCi-Oc9n4qNYqsKv1sBSYB76DqjpuZVzmh47A7y0ySAudIBvz4V1BFKBgFFsvsCBggbPN9Mz9EQBLZjSEOjMS6kdxhIS-_eE9JQRFw1ljmh3XU_tMWTiY_cHbLQlHicSKcwOPqYm8e4ixYP_sw4lFffxcnOsFP7L7ChCtvE0PaemO4S_Gp67FZP97O7GUKynG_EpYMBSVu2zCK-gvH25AH-8Z3cpX9-uPm9seUQ"/><span class="font-headline-md text-headline-md tracking-tight text-on-surface">ProfileLink</span></a><nav class="hidden lg:flex items-center gap-space-lg ml-space-lg" data-active-classes="text-primary font-bold"><a aria-current="page" class="transition-colors text-primary font-bold" data-path="accueil" href="#">Produit</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="fonctionnalites" href="#">Fonctionnalités</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="exemples" href="#">Exemples</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="tarifs" href="#">Tarifs</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="faq" href="#">FAQ</a></nav></div><div class="flex items-center gap-space-md"><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface px-space-sm py-space-xs transition-colors" data-path="connexion" href="#">Connexion</a><a class="font-label-md text-label-md bg-tertiary-container hover:bg-tertiary text-on-tertiary px-space-md py-space-sm rounded-lg shadow-sm transition-all hover:-translate-y-0.5" data-path="inscription" href="#">Créer mon profil</a><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT9iqcpWeQiYThpv08gLrUbBEX6BMVaHOcvIEO7XyoeZl6LNRgxavl2BYOxkdqaacAARfHiSoCPMIy95w7JCOWLpphzNSrJtMM0AzwpL8ucaUtSSXvy5DGhPJn3328SOg3WgQELpRat9IJkY1nHE0vHcSfccgLilmVfw3DKs4QlD2V-Db2WWh_4EVClZKmPV7Mrc5xjXLtKr-RpI9tzwZ4kWFODQwl6dYbjr3stJQlm9890okUvfN4"/></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full relative">
+<div class="w-full bg-surface-container-low/60 backdrop-blur-md sticky top-16 z-30 shadow-sm">
+<div class="max-w-4xl mx-auto px-gutter py-space-sm flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+          Profil Public Actif
+        </span>
+<span class="hidden sm:inline-block font-code-sm text-code-sm text-on-surface-variant font-mono">profilelink.me/p/jean-dupont</span>
+</div>
+<div class="flex items-center gap-space-xs sm:gap-space-sm">
+<button class="inline-flex items-center gap-1.5 px-space-sm py-1.5 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-sm text-label-sm shadow-sm transition-all" id="btnShareNative">
+<span class="material-symbols-outlined text-base">share</span>
+<span class="hidden md:inline">Partager</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-space-sm py-1.5 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-sm text-label-sm shadow-sm transition-all" id="btnDownloadVcard">
+<span class="material-symbols-outlined text-base">contact_page</span>
+<span class="hidden sm:inline">Enregistrer le contact (.vcf)</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-space-md py-1.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-sm text-label-sm shadow-sm transition-all shadow-primary/20" id="btnOpenModal">
+<span class="material-symbols-outlined text-base">qr_code_2</span>
+<span>Afficher le QR Code</span>
+</button>
+</div>
+</div>
+</div>
+<div class="w-full max-w-3xl mx-auto px-gutter py-space-xl relative">
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg md:p-space-xl shadow-xl shadow-surface-dim/40 mb-space-lg relative overflow-hidden">
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-24 -left-24 w-64 h-64 bg-tertiary-container/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex flex-col sm:flex-row items-center sm:items-start gap-space-lg text-center sm:text-left relative z-10">
+<div class="relative shrink-0">
+<img class="w-28 h-28 md:w-32 md:h-32 rounded-2xl object-cover shadow-md shadow-on-surface/10 bg-surface-container-high ring-4 ring-surface-container-lowest" data-alt="Close up studio portrait of Jean Dupont, professional VP of Product in his late thirties with dark stylish hair and a confident relaxed smile, navy blue tailored minimalist blazer and crisp white crew neck against a warm architectural concrete studio backdrop, high end professional photography, soft diffused natural daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBerzDLV3J5n1Joz9hzOTUhQLnFlIXeo2nwJULWEKJaBzn1zD35C1SqVlyMbrec3TX6BAJDprCoGXFmNgMl5smRnoXbz3uW7YBYcrOEEi8aRoG5nmiIckFvYGyjlFH-buZs10LQ4LyAHGKMOjdiWRVhOAfR6by0m-ZlK4PlbmvxDQ_EqgqETNWnVqQA8s-V3uSHY9gt2mAp50UPud45tFJoqaHKKs3LgeW9Gf10i-P9O-wAiepdljai"/>
+<div class="absolute -bottom-1 -right-1 bg-surface-container-lowest rounded-full p-1 shadow-sm" title="Statut vérifié">
+<span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex flex-wrap items-center justify-center sm:justify-start gap-space-xs md:gap-space-sm mb-1">
+<h1 class="font-headline-xl text-headline-xl text-on-surface font-extrabold tracking-tight">Jean Dupont</h1>
+<span class="inline-flex items-center px-2 py-0.5 rounded-md bg-secondary-container text-on-secondary-fixed font-code-sm text-code-sm font-semibold">Pro Partner</span>
+</div>
+<p class="font-headline-md text-headline-md text-primary font-semibold mb-space-xs">VP of Product &amp; Strategic Design</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center justify-center sm:justify-start gap-1 mb-space-md">
+<span class="material-symbols-outlined text-tertiary-container text-base">location_on</span>
+<span>Paris, France</span>
+<span class="mx-1 text-outline-variant">•</span>
+<span class="text-on-surface font-medium">Disponible pour missions de conseil stratégique</span>
+</p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-lg max-w-xl">
+            12+ ans d'expérience à bâtir des produits SaaS B2B scalables. Passionné par l'intersection entre le design system, l'expérience utilisateur et les métriques de croissance produit.
+          </p>
+<div class="flex flex-wrap items-center justify-center sm:justify-start gap-space-sm mb-space-lg">
+<a class="inline-flex items-center gap-2 px-space-lg py-2.5 rounded-lg bg-tertiary-container hover:bg-tertiary text-on-tertiary font-label-md text-label-md shadow-md shadow-tertiary-container/20 transition-all hover:-translate-y-0.5" href="mailto:jean.dupont.product@gmail.com">
+<span class="material-symbols-outlined text-lg">mail</span>
+              Me contacter
+            </a>
+<a class="inline-flex items-center gap-2 px-space-md py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md shadow-sm transition-all" href="#">
+<span class="material-symbols-outlined text-lg">description</span>
+              Télécharger mon CV
+            </a>
+<button class="inline-flex items-center gap-2 px-space-md py-2.5 rounded-lg bg-primary-fixed hover:bg-primary-fixed-dim text-on-primary-fixed font-label-md text-label-md shadow-sm transition-all" id="btnHeroQr">
+<span class="material-symbols-outlined text-lg">qr_code</span>
+              QR Code
+            </button>
+</div>
+<div class="flex items-center justify-center sm:justify-start gap-space-xs pt-space-sm border-t border-surface-container">
+<a class="p-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" href="https://linkedin.com" rel="noopener noreferrer" target="_blank" title="LinkedIn">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76c.92 0 1.66-.74 1.66-1.66a1.66 1.66 0 0 0-1.66-1.66c-.92 0-1.66.74-1.66 1.66 0 .92.74 1.66 1.66 1.66m1.39 9.74v-8.37H5.07v8.37h2.78Z"></path></svg>
+</a>
+<a class="p-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" href="https://twitter.com" rel="noopener noreferrer" target="_blank" title="X / Twitter">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+</a>
+<a class="p-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank" title="GitHub">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"></path></svg>
+</a>
+<a class="p-2 rounded-lg text-on-surface-variant hover:text-tertiary-container hover:bg-surface-container transition-colors" href="https://substack.com" rel="noopener noreferrer" target="_blank" title="Substack">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md mb-space-lg">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center gap-space-xs text-primary mb-1">
+<span class="material-symbols-outlined text-lg">rocket_launch</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-bold">Produits lancés</span>
+</div>
+<div class="font-headline-xl text-headline-xl font-extrabold text-on-surface">14+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">SaaS B2B &amp; Apps grand public</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center gap-space-xs text-tertiary-container mb-1">
+<span class="material-symbols-outlined text-lg">groups</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-bold">Équipe dirigée</span>
+</div>
+<div class="font-headline-xl text-headline-xl font-extrabold text-on-surface">32</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Designers, PM &amp; Devs encadrés</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center gap-space-xs text-primary mb-1">
+<span class="material-symbols-outlined text-lg">trending_up</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-bold">Croissance ARR</span>
+</div>
+<div class="font-headline-xl text-headline-xl font-extrabold text-on-surface">x3.8</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Moyenne observée post-refonte</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg mb-space-xl">
+<div class="md:col-span-2 space-y-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">work</span>
+              Expériences professionnelles
+            </h2>
+<span class="font-code-sm text-code-sm text-on-surface-variant">2012 — Aujourd'hui</span>
+</div>
+<div class="space-y-space-md">
+<div class="p-space-md rounded-xl bg-surface-container-low/80 hover:bg-surface-container-low transition-colors">
+<div class="flex items-start justify-between gap-space-sm mb-1">
+<div>
+<h3 class="font-headline-md text-label-md font-bold text-on-surface">VP of Product &amp; Design</h3>
+<p class="font-body-sm text-body-sm text-primary font-medium">PayFlow Solutions • FinTech B2B</p>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">2021 — Présent</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">Direction d'une squad produit de 18 personnes. Restructuration complète du design system et réduction du churn de 27% sur la première année.</p>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-code-sm text-code-sm">Roadmap B2B</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-code-sm text-code-sm">Design Token Studio</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-code-sm text-code-sm">SaaS Metrics</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low/80 hover:bg-surface-container-low transition-colors">
+<div class="flex items-start justify-between gap-space-sm mb-1">
+<div>
+<h3 class="font-headline-md text-label-md font-bold text-on-surface">Head of Design &amp; UX Lead</h3>
+<p class="font-body-sm text-body-sm text-primary font-medium">ScaleCloud Infrastructure</p>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">2017 — 2021</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">Conception de la console DevOps cloud de zéro à 120 000 utilisateurs actifs quotidiens. Harmonisation de l'identité UX internationale.</p>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-code-sm text-code-sm">UX Research</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-code-sm text-code-sm">Enterprise UI</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-code-sm text-code-sm">Micro-interactions</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low/80 hover:bg-surface-container-low transition-colors">
+<div class="flex items-start justify-between gap-space-sm mb-1">
+<div>
+<h3 class="font-headline-md text-label-md font-bold text-on-surface">Lead Product Designer</h3>
+<p class="font-body-sm text-body-sm text-primary font-medium">Novatech Agency</p>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">2013 — 2017</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Accompagnement de plus de 25 startups dans la création de leurs MVPs et interfaces web haute conversion.</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold flex items-center gap-2 mb-space-md">
+<span class="material-symbols-outlined text-primary">school</span>
+            Formations &amp; Diplômes
+          </h2>
+<div class="space-y-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center shrink-0 text-on-surface">
+<span class="material-symbols-outlined text-xl">palette</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md font-bold text-on-surface">Master Design &amp; Stratégie Interactive</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">École des Gobelins, Paris • Promotion Major</p>
+<span class="font-code-sm text-code-sm text-outline">2010 — 2012</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center shrink-0 text-on-surface">
+<span class="material-symbols-outlined text-xl">terminal</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md font-bold text-on-surface">Licence Sciences de l'Information &amp; Systèmes Numériques</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Université Paris-Saclay</p>
+<span class="font-code-sm text-code-sm text-outline">2007 — 2010</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold flex items-center gap-2 mb-space-md">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+            Certifications
+          </h2>
+<div class="space-y-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-xl">military_tech</span>
+<div>
+<div class="font-label-md text-label-md font-bold text-on-surface">Nielsen Norman UX Master</div>
+<div class="font-code-sm text-code-sm text-on-surface-variant">NN/g Cert #89421 • 2023</div>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary-container text-xl">cloud_done</span>
+<div>
+<div class="font-label-md text-label-md font-bold text-on-surface">AWS Cloud Practitioner</div>
+<div class="font-code-sm text-code-sm text-on-surface-variant">Amazon Web Services • 2022</div>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-xl">bolt</span>
+<div>
+<div class="font-label-md text-label-md font-bold text-on-surface">Reforge Product Strategy</div>
+<div class="font-code-sm text-code-sm text-on-surface-variant">San Francisco Cohort • 2021</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold flex items-center gap-2 mb-space-md">
+<span class="material-symbols-outlined text-primary">psychology</span>
+            Compétences Clés
+          </h2>
+<div class="space-y-space-sm">
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-on-surface font-semibold">Product Management SaaS</span>
+<span class="font-code-sm text-code-sm text-primary">Expert</span>
+</div>
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full w-[95%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-on-surface font-semibold">Design Systems &amp; Tokens</span>
+<span class="font-code-sm text-code-sm text-primary">Master</span>
+</div>
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full w-[90%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-on-surface font-semibold">Growth &amp; Activation UX</span>
+<span class="font-code-sm text-code-sm text-primary">Avancé</span>
+</div>
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-tertiary-container rounded-full w-[85%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-on-surface font-semibold">Leadership &amp; Mentoring</span>
+<span class="font-code-sm text-code-sm text-primary">Senior</span>
+</div>
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full w-[92%]"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm text-center">
+<div class="w-12 h-12 mx-auto rounded-full bg-surface-container flex items-center justify-center text-tertiary-container mb-space-sm">
+<span class="material-symbols-outlined text-2xl">qr_code_scanner</span>
+</div>
+<h3 class="font-headline-md text-label-md font-bold text-on-surface mb-1">Rencontre en physique ?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Faites scanner votre code par vos interlocuteurs pour transmettre instantanément votre carte de visite.</p>
+<button class="w-full py-2.5 rounded-lg bg-surface-container-highest hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-colors flex items-center justify-center gap-2" id="btnSidebarQr">
+<span class="material-symbols-outlined text-base">fullscreen</span>
+            Agrandir le QR Code
+          </button>
+</div>
+</div>
+</div>
+<div class="text-center py-space-md text-on-surface-variant font-body-sm text-body-sm">
+<div class="inline-flex items-center gap-2 px-space-md py-1 rounded-full bg-surface-container">
+<span>Propulsé par</span>
+<strong class="text-primary font-bold">ProfileLink</strong>
+<span class="text-outline-variant">•</span>
+<a class="text-tertiary-container hover:underline font-medium" href="#">Créez votre profil en 1 minute</a>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-on-background/60 backdrop-blur-md transition-opacity duration-300" id="qrModalBackdrop">
+<div class="w-full max-w-md bg-surface-container-lowest rounded-3xl p-space-lg md:p-space-xl shadow-2xl shadow-on-surface/20 transform transition-all duration-300 scale-100 relative" id="qrModalContent">
+<button aria-label="Fermer le modal" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" id="btnCloseModal">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+<div class="text-center mb-space-md">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm mb-space-xs font-semibold">
+<span class="material-symbols-outlined text-sm">qr_code</span>
+          Connexion Instantanée
+        </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-extrabold tracking-tight">QR Code du Profil</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 max-w-xs mx-auto">
+          Scannez avec un smartphone pour ouvrir instantanément ce profil sur mobile.
+        </p>
+</div>
+<div class="relative mx-auto w-64 h-64 p-4 rounded-2xl bg-surface-container-lowest border-2 border-primary/20 shadow-lg shadow-primary/5 flex items-center justify-center mb-space-md">
+<svg class="w-full h-full text-on-surface" fill="none" viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<rect fill="white" height="200" rx="12" width="200"></rect>
+<rect fill="currentColor" height="48" rx="6" width="48" x="16" y="16"></rect>
+<rect fill="white" height="36" rx="4" width="36" x="22" y="22"></rect>
+<rect fill="currentColor" height="24" rx="2" width="24" x="28" y="28"></rect>
+<rect fill="currentColor" height="48" rx="6" width="48" x="136" y="16"></rect>
+<rect fill="white" height="36" rx="4" width="36" x="142" y="22"></rect>
+<rect fill="currentColor" height="24" rx="2" width="24" x="148" y="28"></rect>
+<rect fill="currentColor" height="48" rx="6" width="48" x="16" y="136"></rect>
+<rect fill="white" height="36" rx="4" width="36" x="22" y="142"></rect>
+<rect fill="currentColor" height="24" rx="2" width="24" x="28" y="148"></rect>
+<path d="M72 20h8v8h-8zM88 20h16v8H88zM112 20h8v8h-8zM72 36h8v16h-8zM88 36h8v8h-8zM104 36h16v8h-16zM88 52h24v8H88zM20 72h8v8h-8zM36 72h16v8H36zM60 72h20v8H60zM88 72h8v8h-8zM104 72h8v8h-8zM120 72h16v8h-16zM144 72h16v8h-16zM168 72h12v8h-12zM20 88h16v8H20zM44 88h8v8h-8zM60 88h12v8H60zM128 88h8v8h-8zM144 88h8v8h-8zM160 88h20v8h-20zM20 104h8v16H20zM36 104h16v8H36zM60 104h8v8h-8zM136 104h16v8h-16zM160 104h8v8h-8zM176 104h12v8h-12zM72 120h16v8H72zM96 120h8v8h-8zM112 120h16v8h-16zM136 120h8v8h-8zM152 120h20v8h-20zM72 136h8v16H72zM88 136h16v8H88zM112 136h8v8h-8zM128 136h16v8h-16zM152 136h8v8h-8zM168 136h12v16h-12zM88 152h8v8h-8zM104 152h24v8h-24zM136 152h8v8h-8zM152 152h8v8h-8zM72 168h16v8H72zM96 168h8v8h-8zM112 168h8v8h-8zM128 168h16v8h-16zM152 168h20v8h-20z" fill="currentColor"></path>
+<rect fill="#0037b0" height="48" rx="10" width="48" x="76" y="76"></rect>
+<rect fill="#ffffff" height="13" rx="3" width="13" x="83" y="83"></rect>
+<rect fill="#ffffff" height="13" rx="3" width="13" x="99" y="83"></rect>
+<rect fill="#ffffff" height="13" rx="3" width="13" x="83" y="99"></rect>
+<circle cx="105.5" cy="89.5" fill="#a33900" r="3"></circle>
+</svg>
+<div class="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-surface-container-high text-on-surface px-3 py-0.5 rounded-full text-code-sm font-code-sm shadow-sm flex items-center gap-1 font-mono">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+          HD • Scan instant
+        </div>
+</div>
+<div class="bg-surface-container rounded-xl p-space-sm mb-space-md flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-on-surface-variant text-base">link</span>
+<span class="font-code-sm text-code-sm text-on-surface truncate font-mono" id="urlValue">profilelink.me/p/jean-dupont</span>
+</div>
+<button class="shrink-0 inline-flex items-center gap-1 px-space-sm py-1.5 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm shadow-sm transition-all active:scale-95" id="btnCopyUrl">
+<span class="material-symbols-outlined text-sm">content_copy</span>
+<span id="copyFeedback">Copier</span>
+</button>
+</div>
+<div class="space-y-space-xs mb-space-md">
+<button class="w-full py-3 px-space-md rounded-xl bg-tertiary-container hover:bg-tertiary text-on-tertiary font-label-md text-label-md font-bold shadow-md shadow-tertiary-container/25 flex items-center justify-center gap-2 transition-all hover:-translate-y-0.5" id="btnDownloadQr">
+<span class="material-symbols-outlined text-xl">download</span>
+          Télécharger le QR Code (PNG / SVG)
+        </button>
+<button class="w-full py-2.5 px-space-md rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold flex items-center justify-center gap-2 transition-colors" id="btnShareMsg">
+<span class="material-symbols-outlined text-xl">send</span>
+          Partager par message
+        </button>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low text-center">
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-base">tips_and_updates</span>
+<span>Idéal pour votre CV papier, signature mail ou cartes NFC.</span>
+</p>
+</div>
+</div>
+</div>
+<div class="fixed bottom-6 right-6 z-50 bg-inverse-surface text-inverse-on-surface px-4 py-3 rounded-xl shadow-xl flex items-center gap-2 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none" id="toastNotification">
+<span class="material-symbols-outlined text-primary-fixed">check_circle</span>
+<span class="font-label-md text-label-md" id="toastMessage">Lien copié dans le presse-papier !</span>
+</div>
+</div>
+<script>
+(function() {
+  const modal = document.getElementById('qrModalBackdrop');
+  const modalContent = document.getElementById('qrModalContent');
+  const btnClose = document.getElementById('btnCloseModal');
+  const btnOpen = document.getElementById('btnOpenModal');
+  const btnHeroQr = document.getElementById('btnHeroQr');
+  const btnSidebarQr = document.getElementById('btnSidebarQr');
+  const btnCopy = document.getElementById('btnCopyUrl');
+  const copyFeedback = document.getElementById('copyFeedback');
+  const toast = document.getElementById('toastNotification');
+  const toastMsg = document.getElementById('toastMessage');
+  const btnDownloadQr = document.getElementById('btnDownloadQr');
+  const btnShareNative = document.getElementById('btnShareNative');
+  const btnShareMsg = document.getElementById('btnShareMsg');
+  const btnDownloadVcard = document.getElementById('btnDownloadVcard');
+
+  function showToast(text) {
+    if (!toast) return;
+    toastMsg.textContent = text;
+    toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+    toast.classList.add('translate-y-0', 'opacity-100');
+    setTimeout(() => {
+      toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+      toast.classList.remove('translate-y-0', 'opacity-100');
+    }, 2800);
+  }
+
+  function openModal() {
+    if (!modal) return;
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    setTimeout(() => {
+      modal.classList.remove('opacity-0');
+      modal.classList.add('opacity-100');
+      if (modalContent) {
+        modalContent.classList.remove('scale-95');
+        modalContent.classList.add('scale-100');
+      }
+    }, 10);
+  }
+
+  function closeModal() {
+    if (!modal) return;
+    modal.classList.remove('opacity-100');
+    modal.classList.add('opacity-0');
+    if (modalContent) {
+      modalContent.classList.remove('scale-100');
+      modalContent.classList.add('scale-95');
+    }
+    setTimeout(() => {
+      modal.classList.remove('flex');
+      modal.classList.add('hidden');
+    }, 250);
+  }
+
+  if (btnClose) btnClose.addEventListener('click', closeModal);
+  if (btnOpen) btnOpen.addEventListener('click', openModal);
+  if (btnHeroQr) btnHeroQr.addEventListener('click', openModal);
+  if (btnSidebarQr) btnSidebarQr.addEventListener('click', openModal);
+
+  if (modal) {
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+      closeModal();
+    }
+  });
+
+  if (btnCopy) {
+    btnCopy.addEventListener('click', function() {
+      const url = 'https://profilelink.me/p/jean-dupont';
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(url).then(() => {
+          copyFeedback.textContent = 'Copié !';
+          btnCopy.classList.add('bg-primary', 'text-on-primary');
+          showToast('URL copiée avec succès !');
+          setTimeout(() => {
+            copyFeedback.textContent = 'Copier';
+            btnCopy.classList.remove('bg-primary', 'text-on-primary');
+          }, 2000);
+        });
+      } else {
+        showToast('URL prête à être copiée');
+      }
+    });
+  }
+
+  if (btnDownloadQr) {
+    btnDownloadQr.addEventListener('click', function() {
+      showToast('Génération du pack QR Code haute résolution (PNG/SVG)...');
+      setTimeout(() => {
+        showToast('Téléchargement terminé !');
+      }, 1200);
+    });
+  }
+
+  if (btnShareNative) {
+    btnShareNative.addEventListener('click', function() {
+      if (navigator.share) {
+        navigator.share({
+          title: 'Jean Dupont - VP of Product',
+          text: 'Découvrez le profil professionnel de Jean Dupont sur ProfileLink',
+          url: 'https://profilelink.me/p/jean-dupont'
+        }).catch(() => {});
+      } else {
+        showToast('Lien du profil copié dans le presse-papier !');
+      }
+    });
+  }
+
+  if (btnShareMsg) {
+    btnShareMsg.addEventListener('click', function() {
+      const text = encodeURIComponent("Consulte le profil de Jean Dupont (VP of Product) : https://profilelink.me/p/jean-dupont");
+      window.open(`https://api.whatsapp.com/send?text=${text}`, '_blank');
+    });
+  }
+
+  if (btnDownloadVcard) {
+    btnDownloadVcard.addEventListener('click', function() {
+      const vcardData = `BEGIN:VCARD\nVERSION:3.0\nFN:Jean Dupont\nTITLE:VP of Product & Strategic Design\nEMAIL:jean.dupont.product@gmail.com\nURL:https://profilelink.me/p/jean-dupont\nADR:;;Paris;;;France\nEND:VCARD`;
+      const blob = new Blob([vcardData], { type: 'text/vcard;charset=utf-8;' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.setAttribute('download', 'Jean_Dupont.vcf');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      showToast('Contact (vCard) téléchargé !');
+    });
+  }
+})();
+</script></main><footer class="w-full bg-surface-container-low border-t border-outline-variant/30 py-space-xl"><div class="max-w-7xl mx-auto px-gutter"><div class="grid grid-cols-2 md:grid-cols-5 gap-space-xl mb-space-xl"><div class="col-span-2"><div class="flex items-center gap-space-sm mb-space-sm"><img alt="ProfileLink Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XR_gSuj80TnlTcmnzOCi-Oc9n4qNYqsKv1sBSYB76DqjpuZVzmh47A7y0ySAudIBvz4V1BFKBgFFsvsCBggbPN9Mz9EQBLZjSEOjMS6kdxhIS-_eE9JQRFw1ljmh3XU_tMWTiY_cHbLQlHicSKcwOPqYm8e4ixYP_sw4lFffxcnOsFP7L7ChCtvE0PaemO4S_Gp67FZP97O7GUKynG_EpYMBSVu2zCK-gvH25AH-8Z3cpX9-uPm9seUQ"/><span class="font-headline-md text-headline-md tracking-tight text-on-surface">ProfileLink</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm mb-space-md">La plateforme bio-link de nouvelle génération pour unifier votre présence numérique, vos analytics et vos conversions.</p><div class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container-high text-on-surface-variant font-code-sm text-code-sm"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>Tous les systèmes opérationnels</div></div><div><div class="font-label-md text-label-md text-on-surface mb-space-sm">Produit</div><ul class="flex flex-col gap-space-xs"><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface" data-path="fonctionnalites" href="#">Fonctionnalités</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface" data-path="exemples" href="#">Galerie de thèmes</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface" data-path="tarifs" href="#">Tarification</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface" data-path="changelog" href="#">Nouveautés</a></li></ul></div><div><div class="font-label-md text-label-md text-on-surface mb-space-sm">Ressources</div><ul class="flex flex-col gap-space-xs"><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface" data-path="centre-daide" href="#">Centre d'aide</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface" data-path="faq" href="#">FAQ</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface" data-path="blog" href="#">Guides créateurs</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface" data-path="api-docs" href="#">Documentation API</a></li></ul></div><div><div class="font-label-md text-label-md text-on-surface mb-space-sm">Légal &amp; Sécurité</div><ul class="flex flex-col gap-space-xs"><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface" data-path="confidentialite" href="#">Confidentialité</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface" data-path="conditions" href="#">Conditions d'utilisation</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface" data-path="mentions-legales" href="#">Mentions légales</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface" data-path="cookies" href="#">Gestion des cookies</a></li></ul></div></div><div class="pt-space-lg border-t border-outline-variant/30 flex flex-col sm:flex-row items-center justify-between gap-space-md"><p class="font-body-sm text-body-sm text-on-surface-variant">© 2024 ProfileLink Technologies Inc. Tous droits réservés.</p><p class="font-code-sm text-code-sm text-on-surface-variant">v2.4.0 • Statut: Opérationnel</p></div></div></footer></body></html>

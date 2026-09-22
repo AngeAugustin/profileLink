@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "outline": "#747686", "on-primary-fixed-variant": "#0039b5", "primary-fixed-dim": "#b7c4ff", "on-primary": "#ffffff", "on-surface-variant": "#434655", "surface-variant": "#e0e3e5", "tertiary": "#7c2900", "tertiary-container": "#a33900", "surface-tint": "#2151da", "surface-container-low": "#f2f4f6", "primary": "#0037b0", "on-background": "#191c1e", "surface-container-lowest": "#ffffff", "inverse-primary": "#b7c4ff", "on-secondary": "#ffffff", "on-tertiary-fixed-variant": "#7f2b00", "inverse-surface": "#2d3133", "on-tertiary": "#ffffff", "secondary": "#565e74", "surface-container": "#eceef0", "background": "#f7f9fb", "on-secondary-container": "#5c647a", "tertiary-fixed-dim": "#ffb599", "secondary-fixed-dim": "#bec6e0", "on-error": "#ffffff", "on-primary-container": "#cad3ff", "on-surface": "#191c1e", "surface-bright": "#f7f9fb", "outline-variant": "#c4c5d7", "on-primary-fixed": "#001551", "surface-dim": "#d8dadc", "on-secondary-fixed-variant": "#3f465c", "on-tertiary-container": "#ffc9b6", "primary-fixed": "#dce1ff", "surface-container-high": "#e6e8ea", "surface": "#f7f9fb", "surface-container-highest": "#e0e3e5", "primary-container": "#1d4ed8", "secondary-fixed": "#dae2fd", "secondary-container": "#dae2fd", "on-secondary-fixed": "#131b2e", "error-container": "#ffdad6", "error": "#ba1a1a", "on-error-container": "#93000a", "inverse-on-surface": "#eff1f3", "on-tertiary-fixed": "#370e00", "tertiary-fixed": "#ffdbce" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "space-xl": "2.5rem", "gutter": "1.5rem", "gutter-mobile": "1rem", "margin": "2rem", "margin-mobile": "1rem", "space-lg": "1.5rem", "space-md": "1rem", "space-sm": "0.5rem" }, "fontFamily": { "body-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "code-sm": ["JetBrains Mono"], "headline-xl-mobile": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"] }, "fontSize": { "body-md": ["0.9375rem", { "lineHeight": "1.5rem", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-lg": ["1.125rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.005em", "fontWeight": "400" }], "display-lg": ["3.5rem", { "lineHeight": "4rem", "letterSpacing": "-0.03em", "fontWeight": "800" }], "headline-xl": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-md": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0.01em", "fontWeight": "600" }], "label-sm": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.025em", "fontWeight": "600" }], "code-sm": ["0.8125rem", { "lineHeight": "1.25rem", "letterSpacing": "-0.01em", "fontWeight": "500" }], "headline-xl-mobile": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.015em", "fontWeight": "700" }], "display-lg-mobile": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.025em", "fontWeight": "800" }], "body-sm": ["0.8125rem", { "lineHeight": "1.25rem", "letterSpacing": "0.005em", "fontWeight": "400" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-[0_1px_8px_rgba(15,23,42,0.04)]"><div class="h-16 max-w-7xl mx-auto px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><a class="flex items-center gap-space-sm" data-path="accueil" href="#"><img alt="ProfileLink Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XR_gSuj80TnlTcmnzOCi-Oc9n4qNYqsKv1sBSYB76DqjpuZVzmh47A7y0ySAudIBvz4V1BFKBgFFsvsCBggbPN9Mz9EQBLZjSEOjMS6kdxhIS-_eE9JQRFw1ljmh3XU_tMWTiY_cHbLQlHicSKcwOPqYm8e4ixYP_sw4lFffxcnOsFP7L7ChCtvE0PaemO4S_Gp67FZP97O7GUKynG_EpYMBSVu2zCK-gvH25AH-8Z3cpX9-uPm9seUQ"/><span class="font-headline-md text-headline-md tracking-tight text-on-surface">ProfileLink</span></a><nav class="hidden lg:flex items-center gap-space-lg ml-space-lg" data-active-classes="text-primary font-bold"><a aria-current="page" class="transition-colors text-primary font-bold" data-path="accueil" href="#">Produit</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="fonctionnalites" href="#">Fonctionnalités</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="exemples" href="#">Exemples</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="tarifs" href="#">Tarifs</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="faq" href="#">FAQ</a></nav></div><div class="flex items-center gap-space-md"><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface px-space-sm py-space-xs transition-colors" data-path="connexion" href="#">Connexion</a><a class="font-label-md text-label-md bg-tertiary-container hover:bg-tertiary text-on-tertiary px-space-md py-space-sm rounded-lg shadow-sm transition-all hover:-translate-y-0.5" data-path="inscription" href="#">Créer mon profil</a><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT9iqcpWeQiYThpv08gLrUbBEX6BMVaHOcvIEO7XyoeZl6LNRgxavl2BYOxkdqaacAARfHiSoCPMIy95w7JCOWLpphzNSrJtMM0AzwpL8ucaUtSSXvy5DGhPJn3328SOg3WgQELpRat9IJkY1nHE0vHcSfccgLilmVfw3DKs4QlD2V-Db2WWh_4EVClZKmPV7Mrc5xjXLtKr-RpI9tzwZ4kWFODQwl6dYbjr3stJQlm9890okUvfN4"/></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Decorative Glow / Grid Layer -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[900px] h-[480px] bg-gradient-to-b from-primary/10 via-secondary-container/40 to-transparent blur-3xl pointer-events-none -z-10"></div>
+<!-- 1. Hero Section -->
+<section class="max-w-7xl mx-auto px-gutter pt-12 pb-20 lg:pt-16 lg:pb-28 w-full">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Left Hero Copy -->
+<div class="lg:col-span-7 flex flex-col items-start space-y-space-md">
+<!-- Live Pill -->
+<div class="inline-flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container-high text-on-surface text-label-sm font-label-sm shadow-sm transition-transform hover:scale-105 cursor-default">
+<span class="inline-block w-2 h-2 rounded-full bg-tertiary-container animate-ping"></span>
+<span>La nouvelle référence du profil pro • QR Code &amp; lien unique instantanés</span>
+</div>
+<!-- Headline -->
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface tracking-tight max-w-2xl">
+            Votre profil professionnel. <br class="hidden sm:inline"/>
+<span class="text-primary-container">Un lien.</span>
+<span class="text-tertiary-container">Un QR code.</span>
+</h1>
+<!-- Subtitle -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
+            Oubliez le portfolio lourd et le PDF figé. Créez des pages professionnelles élégantes, interactives et partageables en un instant sur votre CV, LinkedIn ou par scan direct.
+          </p>
+<!-- Dual CTA Group -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-md pt-space-xs w-full sm:w-auto">
+<a class="inline-flex items-center justify-center gap-space-xs bg-tertiary-container hover:bg-tertiary text-on-tertiary font-label-md text-label-md px-space-lg py-3.5 rounded-lg shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5 text-center" data-path="inscription" href="#">
+<span>Créer mon profil gratuitement</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+<a class="inline-flex items-center justify-center gap-space-xs bg-surface-container-lowest hover:bg-surface-container text-primary font-label-md text-label-md px-space-lg py-3.5 rounded-lg shadow-sm transition-all hover:text-primary-container" href="#apercu-live">
+<span class="material-symbols-outlined text-lg">play_circle</span>
+<span>Voir une démo en direct</span>
+</a>
+</div>
+<!-- Reassurance Points -->
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-space-xs pt-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>Sans carte bancaire</span>
+</div>
+<span class="text-outline-variant">•</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span>Prêt en 3 minutes</span>
+</div>
+<span class="text-outline-variant">•</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">domain</span>
+<span>Domaine personnalisé</span>
+</div>
+</div>
+</div>
+<!-- Right Hero Mockup (Split Interactive View) -->
+<div class="lg:col-span-5 relative w-full flex justify-center lg:justify-end" id="apercu-live">
+<!-- Backdrop Soft Glow -->
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/10 via-tertiary-container/10 to-transparent blur-2xl rounded-3xl -z-10"></div>
+<!-- Simulated Interactive Smartphone / Card -->
+<div class="w-full max-w-[420px] bg-surface-container-lowest rounded-3xl shadow-xl overflow-hidden p-space-md flex flex-col space-y-space-md transition-all">
+<!-- Phone Header Bar -->
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-1.5">
+<div class="w-2.5 h-2.5 rounded-full bg-error"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-secondary-fixed-dim"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-primary-fixed"></div>
+</div>
+<div class="flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-surface-container text-on-surface-variant font-code-sm text-code-sm">
+<span class="material-symbols-outlined text-xs text-primary">lock</span>
+<span>profilelink.me/p/jean-dupont</span>
+</div>
+<button class="p-1 rounded-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" id="copy-hero-url" title="Copier le lien">
+<span class="material-symbols-outlined text-base">content_copy</span>
+</button>
+</div>
+<!-- Profile Hero Identity -->
+<div class="relative bg-gradient-to-br from-primary-container via-primary to-on-primary-fixed p-space-md rounded-2xl text-on-primary shadow-sm overflow-hidden">
+<div class="absolute -right-8 -bottom-8 w-32 h-32 rounded-full bg-tertiary-container/20 blur-xl"></div>
+<div class="flex items-center gap-space-md relative z-10">
+<div class="relative">
+<img class="w-16 h-16 rounded-2xl object-cover shadow-md" data-alt="Portrait professionnel de Jean Dupont, VP Product, homme souriant dans un bureau lumineux moderne aux tons bleus et lumière naturelle flatteuse, 50mm f1.8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7dIfgkROYziRS2o8Itfdmy91F8gPiC0HuP0MBFS2br_H6-LF6o3lN5_Ai5CEv_WYYUy5jX4B7aTYAA97yKaZTwKTlEls7Qiir2V0Gk8rX4xlBQ4s5d77kxt3bMHVYYSGT0x_fnxzd0lysPd96efjouDGoEwxkmmrgQNa_4041CylqPaII5z48m1vOArqS3LXuIT8XxFiMeyJLzX4sMT4S6FuQmdt4HJZNr3B-ht7AN3A8Z8PxTvRE"/>
+<span class="absolute -bottom-1 -right-1 w-4 h-4 bg-tertiary-container rounded-full border-2 border-surface-container-lowest flex items-center justify-center text-[10px] text-on-tertiary font-bold">✓</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-space-xs">
+<h2 class="font-headline-md text-headline-md truncate">Jean Dupont</h2>
+<span class="material-symbols-outlined text-on-tertiary-container text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-primary-container">VP Product &amp; Design</p>
+<p class="font-body-sm text-body-sm text-on-primary-container/80 flex items-center gap-0.5 mt-0.5">
+<span class="material-symbols-outlined text-xs">location_on</span> Paris, France
+                  </p>
+</div>
+</div>
+<!-- Badges Skills -->
+<div class="flex flex-wrap gap-1.5 mt-space-md relative z-10">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest/20 backdrop-blur-sm text-on-primary font-label-sm text-label-sm">Product Strategy</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest/20 backdrop-blur-sm text-on-primary font-label-sm text-label-sm">Design Systems</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest/20 backdrop-blur-sm text-on-primary font-label-sm text-label-sm">SaaS Scale</span>
+</div>
+</div>
+<!-- Mini Experience Timeline Card -->
+<div class="bg-surface-container-low p-space-md rounded-xl space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Parcours Récent</span>
+<span class="font-code-sm text-code-sm text-tertiary-container font-semibold">12 ans exp.</span>
+</div>
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between bg-surface-container-lowest p-space-xs px-space-sm rounded-lg shadow-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary font-bold text-xs">NL</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface">Head of Product • NovaLabs</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">2021 — Présent</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-sm">open_in_new</span>
+</div>
+<div class="flex items-center justify-between bg-surface-container-lowest p-space-xs px-space-sm rounded-lg shadow-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-tertiary/10 flex items-center justify-center text-tertiary-container font-bold text-xs">ST</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface">Lead UX • Studio Tech</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">2018 — 2021</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-sm">open_in_new</span>
+</div>
+</div>
+</div>
+<!-- Floating Dynamic QR Code Card -->
+<div class="bg-surface-container p-space-md rounded-xl shadow-md flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<!-- Precision QR Graphic Substrate -->
+<div class="w-20 h-20 bg-surface-container-lowest p-1.5 rounded-xl shadow-sm flex items-center justify-center flex-shrink-0">
+<svg class="w-full h-full text-on-surface" fill="currentColor" viewbox="0 0 100 100">
+<!-- Crisp Vector QR Blueprint Pattern -->
+<rect fill="#0037b0" height="28" rx="4" width="28" x="5" y="5"></rect>
+<rect fill="#ffffff" height="20" rx="2" width="20" x="9" y="9"></rect>
+<rect fill="#0037b0" height="12" rx="1" width="12" x="13" y="13"></rect>
+<rect fill="#0037b0" height="28" rx="4" width="28" x="67" y="5"></rect>
+<rect fill="#ffffff" height="20" rx="2" width="20" x="71" y="9"></rect>
+<rect fill="#0037b0" height="12" rx="1" width="12" x="75" y="13"></rect>
+<rect fill="#0037b0" height="28" rx="4" width="28" x="5" y="67"></rect>
+<rect fill="#ffffff" height="20" rx="2" width="20" x="9" y="71"></rect>
+<rect fill="#0037b0" height="12" rx="1" width="12" x="13" y="75"></rect>
+<!-- Data dots -->
+<rect fill="#a33900" height="6" rx="1" width="6" x="42" y="12"></rect>
+<rect fill="#0037b0" height="6" rx="1" width="6" x="52" y="12"></rect>
+<rect fill="#0037b0" height="6" rx="1" width="6" x="42" y="24"></rect>
+<rect fill="#a33900" height="6" rx="1" width="6" x="52" y="24"></rect>
+<rect fill="#a33900" height="16" rx="3" width="16" x="42" y="42"></rect>
+<rect fill="#0037b0" height="6" rx="1" width="6" x="12" y="45"></rect>
+<rect fill="#0037b0" height="6" rx="1" width="6" x="24" y="45"></rect>
+<rect fill="#0037b0" height="6" rx="1" width="6" x="70" y="45"></rect>
+<rect fill="#0037b0" height="6" rx="1" width="6" x="82" y="45"></rect>
+<rect fill="#0037b0" height="6" rx="1" width="6" x="42" y="70"></rect>
+<rect fill="#0037b0" height="6" rx="1" width="6" x="52" y="78"></rect>
+<rect fill="#0037b0" height="8" rx="1" width="8" x="70" y="70"></rect>
+<rect fill="#a33900" height="8" rx="1" width="8" x="82" y="78"></rect>
+</svg>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-tertiary-container flex items-center gap-1 font-bold">
+<span class="material-symbols-outlined text-sm">qr_code_scanner</span>
+                    Scan direct
+                  </span>
+<p class="font-headline-md text-body-md font-semibold text-on-surface mt-0.5">Testez sur mobile</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Accédez au CV instantané</p>
+</div>
+</div>
+<button class="bg-primary-container text-on-primary px-space-sm py-2 rounded-lg font-label-sm text-label-sm hover:bg-primary transition-all shadow-sm" onclick="navigator.clipboard &amp;&amp; navigator.clipboard.writeText('https://profilelink.me/p/jean-dupont'); alert('Lien copié dans le presse-papier !');">
+                Copier
+              </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- 2. Process Section: 'Une alternative moderne au portfolio' -->
+<section class="w-full bg-surface-container-low py-space-xl">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md">
+<div>
+<span class="font-label-md text-label-md text-tertiary-container uppercase tracking-wider font-semibold">Méthodologie fluide</span>
+<h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface mt-1">
+            Une alternative moderne au portfolio traditionnel
+          </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Conçu pour convertir vos prises de contact professionnelles en opportunités concrètes, en 4 étapes instantanées.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Step 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-space-md group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">edit_note</span>
+</div>
+<div class="font-code-sm text-code-sm text-outline mb-1">ÉTAPE 01</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">1. Créer</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Remplissez vos informations clés ou importez votre profil LinkedIn &amp; CV existant en un simple clic.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center text-primary font-label-sm text-label-sm gap-1">
+<span>Synchronisation auto</span>
+<span class="material-symbols-outlined text-sm">sync</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-space-md group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">palette</span>
+</div>
+<div class="font-code-sm text-code-sm text-outline mb-1">ÉTAPE 02</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">2. Personnaliser</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Choisissez vos palettes, ajoutez vos blocs de recommandations, timeline, médias et badges certifiés.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center text-primary font-label-sm text-label-sm gap-1">
+<span>+15 thèmes Pro</span>
+<span class="material-symbols-outlined text-sm">style</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 rounded-xl bg-tertiary-container/10 text-tertiary-container flex items-center justify-center mb-space-md group-hover:bg-tertiary-container group-hover:text-on-tertiary transition-colors">
+<span class="material-symbols-outlined text-2xl">link</span>
+</div>
+<div class="font-code-sm text-code-sm text-outline mb-1">ÉTAPE 03</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">3. Publier</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Générez votre URL ultra-courte <span class="font-code-sm text-code-sm text-primary">/p/votre-nom</span> ou connectez votre propre nom de domaine sur mesure.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center text-tertiary-container font-label-sm text-label-sm gap-1">
+<span>Domaine SSL inclus</span>
+<span class="material-symbols-outlined text-sm">verified_user</span>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 rounded-xl bg-tertiary-container/10 text-tertiary-container flex items-center justify-center mb-space-md group-hover:bg-tertiary-container group-hover:text-on-tertiary transition-colors">
+<span class="material-symbols-outlined text-2xl">share</span>
+</div>
+<div class="font-code-sm text-code-sm text-outline mb-1">ÉTAPE 04</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">4. Partager</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Téléchargez votre QR code dynamique HD, insérez votre signature e-mail ou programmez une carte NFC physique.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center text-tertiary-container font-label-sm text-label-sm gap-1">
+<span>Diffusion universelle</span>
+<span class="material-symbols-outlined text-sm">contactless</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Key Features Bento Grid -->
+<section class="max-w-7xl mx-auto px-gutter py-space-xl w-full">
+<div class="text-center max-w-3xl mx-auto mb-space-xl">
+<span class="font-label-md text-label-md text-primary font-semibold uppercase tracking-wider">Architecture Haute Précision</span>
+<h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface mt-1">
+        Tout ce qu'exige un professionnel moderne
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+        Des outils de présentation pensés pour les décideurs, clients exigeants et recruteurs tech.
+      </p>
+</div>
+<!-- Bento Layout -->
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-space-md">
+<!-- Bento Item 1 (Wide): Multi-profiles -->
+<div class="md:col-span-2 bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="max-w-md mb-space-md">
+<div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-space-sm">
+<span class="material-symbols-outlined">layers</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Multi-profils sous un compte unique</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Séparez naturellement vos casquettes : un profil corporate pour votre carrière salariée, une vitrine freelance orientée clients, et un espace projets pour vos investissements ou conférences.
+          </p>
+</div>
+<!-- Visual Switcher Representation -->
+<div class="bg-surface-container p-space-sm rounded-xl grid grid-cols-3 gap-space-sm max-w-xl">
+<div class="bg-surface-container-lowest p-space-xs rounded-lg shadow-sm flex items-center gap-2">
+<div class="w-2.5 h-2.5 rounded-full bg-primary"></div>
+<div class="truncate">
+<div class="font-label-sm text-label-sm text-on-surface font-semibold truncate">Poste VP Product</div>
+<div class="font-code-sm text-code-sm text-outline truncate">/p/jean-dupont</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest/60 p-space-xs rounded-lg flex items-center gap-2 opacity-80">
+<div class="w-2.5 h-2.5 rounded-full bg-tertiary-container"></div>
+<div class="truncate">
+<div class="font-label-sm text-label-sm text-on-surface font-semibold truncate">Conseil &amp; Advisory</div>
+<div class="font-code-sm text-code-sm text-outline truncate">/p/dupont-advisory</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest/60 p-space-xs rounded-lg flex items-center gap-2 opacity-80">
+<div class="w-2.5 h-2.5 rounded-full bg-secondary"></div>
+<div class="truncate">
+<div class="font-label-sm text-label-sm text-on-surface font-semibold truncate">Side Venture</div>
+<div class="font-code-sm text-code-sm text-outline truncate">/p/build-saas</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bento Item 2: Dynamic HD QR Code -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-tertiary-container/10 text-tertiary-container flex items-center justify-center mb-space-sm">
+<span class="material-symbols-outlined">qr_code_2</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">QR Code Dynamique HD</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Mettez à jour vos liens et vos informations sans jamais devoir réimprimer votre carte ou changer vos supports.
+          </p>
+</div>
+<div class="pt-space-md flex gap-space-xs">
+<span class="px-2.5 py-1 rounded bg-surface-container font-code-sm text-code-sm text-on-surface">SVG Vectoriel</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-code-sm text-code-sm text-on-surface">PNG 4K</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-code-sm text-code-sm text-on-surface">Logo centré</span>
+</div>
+</div>
+<!-- Bento Item 3: Timeline & Media -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-space-sm">
+<span class="material-symbols-outlined">timeline</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Timeline &amp; Médias interactifs</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Intégrez des maquettes Figma, vidéos de démo YouTube/Loom et slides professionnelles directement dans votre timeline d'expérience.
+          </p>
+</div>
+<div class="mt-space-md flex items-center gap-2 text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-base">video_library</span>
+<span>Embeds interactifs pris en charge</span>
+</div>
+</div>
+<!-- Bento Item 4: Verified Certifications -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-space-sm">
+<span class="material-symbols-outlined">workspace_premium</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Certifications vérifiables</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Liez vos badges Credly, AWS, Google Cloud ou diplômes d'écoles avec validation cryptographique et liens d'audit directs.
+          </p>
+</div>
+<div class="mt-space-md flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-base text-primary">verified</span>
+<span>Protection anti-usurpation</span>
+</div>
+</div>
+<!-- Bento Item 5: Live Analytics -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-tertiary-container/10 text-tertiary-container flex items-center justify-center mb-space-sm">
+<span class="material-symbols-outlined">insights</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Analytics en temps réel</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Suivez qui consulte votre profil : taux de scan par QR code, source de trafic (LinkedIn, CV, signature mail) et clics d'engagement.
+          </p>
+</div>
+<!-- Sparkline visualization -->
+<div class="mt-space-md bg-surface-container p-2.5 rounded-lg flex items-end justify-between h-14">
+<div class="w-3 bg-primary/20 rounded-t h-4"></div>
+<div class="w-3 bg-primary/30 rounded-t h-6"></div>
+<div class="w-3 bg-primary/40 rounded-t h-8"></div>
+<div class="w-3 bg-primary/60 rounded-t h-7"></div>
+<div class="w-3 bg-primary/80 rounded-t h-10"></div>
+<div class="w-3 bg-primary rounded-t h-12"></div>
+<div class="w-3 bg-tertiary-container rounded-t h-14"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Section: 'Votre profil partout' -->
+<section class="w-full bg-surface-container-low py-space-xl">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="text-center max-w-3xl mx-auto mb-space-xl">
+<span class="font-label-md text-label-md text-tertiary-container uppercase tracking-wider font-semibold">Connectivité Universelle</span>
+<h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface mt-1">
+          Un point d'ancrage unique sur tous vos supports
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+          ProfileLink s'intègre harmonieusement dans votre écosystème numérique et physique quotidien.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-md">
+<!-- Touchpoint 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm text-center flex flex-col items-center">
+<div class="w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center text-primary mb-space-sm">
+<span class="material-symbols-outlined text-3xl">mail</span>
+</div>
+<h4 class="font-headline-md text-body-lg font-bold text-on-surface mb-1">Signature E-mail</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Générez un bandeau compact prêt à copier pour Gmail &amp; Outlook.</p>
+</div>
+<!-- Touchpoint 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm text-center flex flex-col items-center">
+<div class="w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center text-primary mb-space-sm">
+<span class="material-symbols-outlined text-3xl">public</span>
+</div>
+<h4 class="font-headline-md text-body-lg font-bold text-on-surface mb-1">Bio LinkedIn &amp; X</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Le lien élégant qui remplace les Linktree peu professionnels.</p>
+</div>
+<!-- Touchpoint 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm text-center flex flex-col items-center">
+<div class="w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center text-tertiary-container mb-space-sm">
+<span class="material-symbols-outlined text-3xl">contactless</span>
+</div>
+<h4 class="font-headline-md text-body-lg font-bold text-on-surface mb-1">Cartes NFC Métal</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Approchez votre carte du smartphone de vos prospects en salon.</p>
+</div>
+<!-- Touchpoint 4 -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm text-center flex flex-col items-center">
+<div class="w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center text-primary mb-space-sm">
+<span class="material-symbols-outlined text-3xl">picture_as_pdf</span>
+</div>
+<h4 class="font-headline-md text-body-lg font-bold text-on-surface mb-1">CV PDF Imprimable</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ajoutez un QR code net en entête pour que le recruteur approfondisse.</p>
+</div>
+<!-- Touchpoint 5 -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm text-center flex flex-col items-center">
+<div class="w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center text-primary mb-space-sm">
+<span class="material-symbols-outlined text-3xl">chat</span>
+</div>
+<h4 class="font-headline-md text-body-lg font-bold text-on-surface mb-1">WhatsApp &amp; SMS</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Une vignette riche d'aperçu générée automatiquement sur mobile.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Personas / Use-Cases Section -->
+<section class="max-w-7xl mx-auto px-gutter py-space-xl w-full">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md">
+<div>
+<span class="font-label-md text-label-md text-primary uppercase tracking-wider font-semibold">Adaptabilité sectorielle</span>
+<h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface mt-1">
+          Pensé pour chaque profil d'excellence
+        </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+        Une mise en valeur ciblée selon vos objectifs : missions, recrutement, investisseurs ou notoriété.
+      </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-space-md">
+<!-- Card Freelances -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm flex flex-col justify-between hover:-translate-y-1 transition-transform">
+<div>
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-on-surface mb-space-sm">
+<span class="material-symbols-outlined">business_center</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Freelances &amp; Indépendants</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Affichez votre TJM, vos disponibilités en direct, témoignages clients et lien Calendly pour caler un appel immédiatement.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs text-primary font-label-sm text-label-sm">
+          +38% de contacts entrants
+        </div>
+</div>
+<!-- Card Dev & Tech -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm flex flex-col justify-between hover:-translate-y-1 transition-transform">
+<div>
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-on-surface mb-space-sm">
+<span class="material-symbols-outlined">terminal</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Tech &amp; Développeurs</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Intégrez vos dépôts GitHub, stack technique détaillée, contributions open source et architectures cloud.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs text-primary font-label-sm text-label-sm">
+          Affichage snippets de code
+        </div>
+</div>
+<!-- Card Designers -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm flex flex-col justify-between hover:-translate-y-1 transition-transform">
+<div>
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-on-surface mb-space-sm">
+<span class="material-symbols-outlined">draw</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Designers &amp; Créatifs</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Galeries plein écran, prototypes Figma embarqués, études de cas avant/après avec navigation tactile.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs text-tertiary-container font-label-sm text-label-sm">
+          Templates ultra-esthétiques
+        </div>
+</div>
+<!-- Card Etudiants -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm flex flex-col justify-between hover:-translate-y-1 transition-transform">
+<div>
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-on-surface mb-space-sm">
+<span class="material-symbols-outlined">school</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Étudiants &amp; Diplômés</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Démarquez-vous des CV conventionnels. Mettez en lumière vos projets universitaires, stages et engagements associatifs.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs text-primary font-label-sm text-label-sm">
+          Formule 100% Gratuite
+        </div>
+</div>
+<!-- Card Cadres & Consultants -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm flex flex-col justify-between hover:-translate-y-1 transition-transform">
+<div>
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-on-surface mb-space-sm">
+<span class="material-symbols-outlined">corporate_fare</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Cadres &amp; Consultants</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Une présence exécutive sobre, discrète et haut de gamme. Idéale pour mandats de transition et conseils d'administration.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs text-primary font-label-sm text-label-sm">
+          Accès confidentiel possible
+        </div>
+</div>
+</div>
+</section>
+<!-- 6. Social Proof & Key Metrics -->
+<section class="w-full bg-surface-container-high py-space-xl">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg text-center divide-y md:divide-y-0 md:divide-x divide-outline-variant/30">
+<!-- Metric 1 -->
+<div class="flex flex-col items-center py-space-sm md:py-0">
+<div class="font-display-lg text-display-lg text-primary tracking-tight font-extrabold">+45 000</div>
+<div class="font-headline-md text-headline-md text-on-surface mt-1">Profils actifs créés</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">À travers plus de 24 pays en Europe &amp; Amérique du Nord.</p>
+</div>
+<!-- Metric 2 -->
+<div class="flex flex-col items-center py-space-sm md:py-0">
+<div class="font-display-lg text-display-lg text-tertiary-container tracking-tight font-extrabold">1.2M</div>
+<div class="font-headline-md text-headline-md text-on-surface mt-1">Scans QR mensuels</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Générés lors d'événements, salons pros et signatures de mails.</p>
+</div>
+<!-- Metric 3 -->
+<div class="flex flex-col items-center py-space-sm md:py-0">
+<div class="font-display-lg text-display-lg text-primary tracking-tight font-extrabold">4.9 / 5</div>
+<div class="font-headline-md text-headline-md text-on-surface mt-1">Apprécié par les recruteurs</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Délai moyen de lecture d'un profil optimisé : 45 secondes.</p>
+</div>
+</div>
+<!-- Testimonial Quote -->
+<div class="mt-space-xl bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm max-w-4xl mx-auto flex flex-col sm:flex-row items-center gap-space-lg">
+<img class="w-20 h-20 rounded-full object-cover shadow-sm flex-shrink-0" data-alt="Portrait professionnel de Sophie Renaud, Directrice Talent Acquisition chez ScaleCorp, regard chaleureux et professionnel sur fond neutre studio, éclairage doux" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEN3wSyPjyFVb8F4_um-I3z60YXuNbkuyNu362JUycG0kI0iEmvpA-ZPyGDhx19JMjiPI_aH4PdsC17y0PIkDKCjDtBFAu5TnvdicE9mDwOzPheChghWYP_jE7rPzqbvgMYyUcukJZ0axS-e6R_pQ6EiaAdxgzgAei7LkquVuHVIRikPwPxW4ZBx2v1rFgTEvy0tEtGAPwckzB3IWLf2FDk5wFbFrd3uRJxfkgd07l820MMKeYe9f1"/>
+<div>
+<div class="flex items-center gap-1 text-tertiary-container mb-1">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic">
+            “Quand un candidat m'envoie un lien ProfileLink ou me tend son QR code lors d'un forum, je sais en 10 secondes si ses réalisations collent au poste. C'est infiniment plus parlant qu'un PDF statique standard.”
+          </p>
+<div class="font-label-md text-label-md text-on-surface font-semibold mt-2">Sophie Renaud</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Directrice Talent Acquisition • ScaleCorp</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. Pricing Section Transparent -->
+<section class="max-w-7xl mx-auto px-gutter py-space-xl w-full">
+<div class="text-center max-w-3xl mx-auto mb-space-xl">
+<span class="font-label-md text-label-md text-tertiary-container uppercase tracking-wider font-semibold">Tarification Juste &amp; Claire</span>
+<h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface mt-1">
+        Démarrez gratuitement, évoluez selon vos ambitions
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+        Aucun frais caché. Annulez ou changez de forfait à tout moment en un clic.
+      </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg items-stretch">
+<!-- Plan Gratuit -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="font-label-md text-label-md text-on-surface-variant uppercase">Starter</div>
+<div class="font-headline-xl text-headline-xl text-on-surface mt-1">0€ <span class="font-body-md text-body-md text-outline">/ pour toujours</span></div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Pour les étudiants et freelances débutants voulant une présence soignée.</p>
+<div class="mt-space-lg space-y-space-sm">
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-base">check</span>
+<span>1 profil professionnel complet</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-base">check</span>
+<span>QR code vectoriel standard</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-base">check</span>
+<span>Analytics sur 30 jours glissants</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-base">check</span>
+<span>URL en profilelink.me/p/nom</span>
+</div>
+</div>
+</div>
+<div class="pt-space-lg">
+<a class="w-full inline-flex items-center justify-center bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md py-3 rounded-lg transition-colors" data-path="inscription" href="#">
+            Commencer gratuitement
+          </a>
+</div>
+</div>
+<!-- Plan Pro (Featured) -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-xl flex flex-col justify-between relative transform lg:-translate-y-3">
+<!-- Floating popular badge -->
+<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-tertiary-container text-on-tertiary px-space-md py-1 rounded-full font-label-sm text-label-sm shadow-md flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">auto_awesome</span>
+<span>Le plus populaire</span>
+</div>
+<div>
+<div class="font-label-md text-label-md text-tertiary-container uppercase font-semibold">Professionnel</div>
+<div class="font-headline-xl text-headline-xl text-on-surface mt-1">
+            39€ <span class="font-body-md text-body-md text-outline">/ an</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-normal block sm:inline sm:ml-2">(soit ~3,25€/mois)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Pour les consultants, dirigeants et experts souhaitant une vitrine ultra-performante.</p>
+<div class="mt-space-lg space-y-space-sm">
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface font-semibold">
+<span class="material-symbols-outlined text-tertiary-container text-base">check_circle</span>
+<span>Profils illimités (Multi-casquettes)</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-base">check</span>
+<span>Tous les templates &amp; thèmes premium</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-base">check</span>
+<span>QR code sur-mesure (logo, couleurs HD)</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-base">check</span>
+<span>Connexion de votre nom de domaine propre</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-base">check</span>
+<span>Analytics complètes en temps réel illimitées</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-base">check</span>
+<span>Profil protégé par mot de passe (option)</span>
+</div>
+</div>
+</div>
+<div class="pt-space-lg">
+<a class="w-full inline-flex items-center justify-center bg-tertiary-container hover:bg-tertiary text-on-tertiary font-label-md text-label-md py-3 rounded-lg shadow-md hover:shadow-lg transition-all" data-path="inscription" href="#">
+            Essai Pro 14 jours offert
+          </a>
+</div>
+</div>
+<!-- Plan Team & Entreprise -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="font-label-md text-label-md text-on-surface-variant uppercase">Team &amp; Entreprise</div>
+<div class="font-headline-xl text-headline-xl text-on-surface mt-1">Sur mesure</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Pour agences, cabinets de recrutement et équipes commerciales entières.</p>
+<div class="mt-space-lg space-y-space-sm">
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-base">check</span>
+<span>Console centralisée d'équipe</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-base">check</span>
+<span>Charte graphique &amp; templates d'entreprise</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-base">check</span>
+<span>Commande groupée de cartes NFC métal</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-base">check</span>
+<span>SSO Okta/Google + conformité RGPD dédiée</span>
+</div>
+</div>
+</div>
+<div class="pt-space-lg">
+<a class="w-full inline-flex items-center justify-center bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md py-3 rounded-lg transition-colors" data-path="contact" href="#">
+            Contacter l'équipe commerciale
+          </a>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. FAQ Accordion Section -->
+<section class="w-full bg-surface-container-low py-space-xl">
+<div class="max-w-4xl mx-auto px-gutter">
+<div class="text-center mb-space-xl">
+<span class="font-label-md text-label-md text-primary font-semibold uppercase tracking-wider">Foire aux questions</span>
+<h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface mt-1">
+          Questions Fréquentes
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+          Tout savoir sur l'hébergement, la sécurité et le partage de votre profil.
+        </p>
+</div>
+<div class="space-y-space-sm" id="faq-container">
+<!-- Question 1 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<button class="w-full px-space-md py-space-md text-left flex items-center justify-between gap-space-sm hover:bg-surface-container/30 transition-colors" onclick="toggleFaq(this)">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">En quoi ProfileLink diffère-t-il d'un profil LinkedIn ou d'un Linktree ?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform">expand_more</span>
+</button>
+<div class="px-space-md pb-space-md text-on-surface-variant font-body-md text-body-md hidden">
+            LinkedIn est un réseau social fermé qui force vos visiteurs à se connecter pour voir votre parcours, tout en affichant des publicités et profils concurrents. Linktree est conçu pour empiler des liens sociaux superficiels. ProfileLink est un véritable portfolio structuré haut de gamme avec vos réalisations, votre QR code, vos certifications vérifiables et vos coordonnées directes, sans friction.
+          </div>
+</div>
+<!-- Question 2 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<button class="w-full px-space-md py-space-md text-left flex items-center justify-between gap-space-sm hover:bg-surface-container/30 transition-colors" onclick="toggleFaq(this)">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Si je mets à jour mon profil, dois-je régénérer mon QR code ?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform">expand_more</span>
+</button>
+<div class="px-space-md pb-space-md text-on-surface-variant font-body-md text-body-md hidden">
+            Absolument pas ! Tous nos QR codes sont dynamiques. Vous pouvez changer d'entreprise, modifier votre numéro de téléphone, remplacer vos liens ou modifier entièrement votre biographie : le QR code déjà imprimé sur vos cartes de visite physiques continuera de diriger immédiatement vers vos informations actualisées.
+          </div>
+</div>
+<!-- Question 3 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<button class="w-full px-space-md py-space-md text-left flex items-center justify-between gap-space-sm hover:bg-surface-container/30 transition-colors" onclick="toggleFaq(this)">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Puis-je utiliser mon propre nom de domaine personnalisé ?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform">expand_more</span>
+</button>
+<div class="px-space-md pb-space-md text-on-surface-variant font-body-md text-body-md hidden">
+            Oui. Avec le forfait Pro, vous pouvez lier en 2 minutes un domaine ou sous-domaine que vous possédez déjà (comme <span class="font-code-sm text-code-sm text-primary">profil.votrenom.fr</span> ou <span class="font-code-sm text-code-sm text-primary">votrenom.com</span>). Nous générons et renouvelons le certificat de sécurité SSL HTTPS automatiquement sans frais supplémentaires.
+          </div>
+</div>
+<!-- Question 4 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<button class="w-full px-space-md py-space-md text-left flex items-center justify-between gap-space-sm hover:bg-surface-container/30 transition-colors" onclick="toggleFaq(this)">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Comment fonctionne la protection par mot de passe ?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform">expand_more</span>
+</button>
+<div class="px-space-md pb-space-md text-on-surface-variant font-body-md text-body-md hidden">
+            Si vous travaillez sur des projets sous accord de confidentialité (NDA) ou souhaitez réserver votre CV à des recruteurs précis, vous pouvez verrouiller l'ensemble ou une sous-section de votre profil par un mot de passe que vous partagez uniquement aux personnes concernées.
+          </div>
+</div>
+<!-- Question 5 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<button class="w-full px-space-md py-space-md text-left flex items-center justify-between gap-space-sm hover:bg-surface-container/30 transition-colors" onclick="toggleFaq(this)">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Mes données personnelles sont-elles protégées et conformes au RGPD ?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform">expand_more</span>
+</button>
+<div class="px-space-md pb-space-md text-on-surface-variant font-body-md text-body-md hidden">
+            Totalement. Nos serveurs d'hébergement sont implantés dans l'Union Européenne. Nous ne vendons aucune donnée personnelle ni comportementale à des régies publicitaires. Vous disposez d'un bouton d'exportation complète et de suppression définitive de votre compte en conformité totale avec les règlements européens.
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- 9. Final Deep Blue Midnight CTA Banner -->
+<section class="w-full max-w-7xl mx-auto px-gutter my-space-xl">
+<div class="relative bg-gradient-to-r from-on-primary-fixed via-primary to-primary-container rounded-3xl p-space-xl text-on-primary shadow-2xl overflow-hidden">
+<!-- Decorative radial highlights -->
+<div class="absolute -right-20 -top-20 w-96 h-96 rounded-full bg-tertiary-container/30 blur-3xl pointer-events-none"></div>
+<div class="absolute left-1/3 bottom-0 w-64 h-64 rounded-full bg-primary-container/40 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-space-xl">
+<div class="max-w-2xl space-y-space-sm">
+<div class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-lowest/15 backdrop-blur-md font-label-sm text-label-sm text-on-primary-container">
+<span class="material-symbols-outlined text-xs">rocket_launch</span>
+<span>Prêt pour votre prochain palier de carrière ?</span>
+</div>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-primary tracking-tight font-extrabold leading-tight">
+            Votre profil professionnel d'exception vous attend.
+          </h2>
+<p class="font-body-lg text-body-lg text-on-primary-container max-w-xl">
+            Rejoignez des dizaines de milliers de professionnels, créateurs et dirigeants qui ont déjà remplacé leur vieux CV papier par ProfileLink.
+          </p>
+</div>
+<div class="flex flex-col sm:flex-row lg:flex-col items-stretch sm:items-center lg:items-end gap-space-md flex-shrink-0">
+<a class="inline-flex items-center justify-center gap-space-xs bg-tertiary-container hover:bg-tertiary text-on-tertiary font-label-md text-label-md px-space-xl py-4 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all text-center" data-path="inscription" href="#">
+<span class="font-bold">Créer mon profil gratuitement</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+<div class="text-on-primary-container text-body-sm font-body-sm text-center sm:text-right">
+            Configuration immédiate • 0€ requis
+          </div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  function toggleFaq(button) {
+    const content = button.nextElementSibling;
+    const icon = button.querySelector('.material-symbols-outlined');
+    const isHidden = content.classList.contains('hidden');
+    
+    // Close other items for neatness
+    document.querySelectorAll('#faq-container > div').forEach(item => {
+      const c = item.querySelector('div:last-child');
+      const ic = item.querySelector('button .material-symbols-outlined');
+      if (c && !c.classList.contains('hidden')) {
+        c.classList.add('hidden');
+        if (ic) ic.textContent = 'expand_more';
+      }
+    });
+
+    if (isHidden) {
+      content.classList.remove('hidden');
+      if (icon) icon.textContent = 'expand_less';
+    } else {
+      content.classList.add('hidden');
+      if (icon) icon.textContent = 'expand_more';
+    }
+  }
+
+  // Quick Copy interaction on hero header button
+  document.getElementById('copy-hero-url')?.addEventListener('click', function(e) {
+    e.preventDefault();
+    navigator.clipboard?.writeText('https://profilelink.me/p/jean-dupont');
+    const icon = this.querySelector('.material-symbols-outlined');
+    if (icon) {
+      icon.textContent = 'check';
+      setTimeout(() => { icon.textContent = 'content_copy'; }, 2000);
+    }
+  });
+</script></main><footer class="w-full bg-surface-container-low border-t border-outline-variant/30 py-space-xl"><div class="max-w-7xl mx-auto px-gutter"><div class="grid grid-cols-2 md:grid-cols-5 gap-space-xl mb-space-xl"><div class="col-span-2"><div class="flex items-center gap-space-sm mb-space-sm"><img alt="ProfileLink Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XR_gSuj80TnlTcmnzOCi-Oc9n4qNYqsKv1sBSYB76DqjpuZVzmh47A7y0ySAudIBvz4V1BFKBgFFsvsCBggbPN9Mz9EQBLZjSEOjMS6kdxhIS-_eE9JQRFw1ljmh3XU_tMWTiY_cHbLQlHicSKcwOPqYm8e4ixYP_sw4lFffxcnOsFP7L7ChCtvE0PaemO4S_Gp67FZP97O7GUKynG_EpYMBSVu2zCK-gvH25AH-8Z3cpX9-uPm9seUQ"/><span class="font-headline-md text-headline-md tracking-tight text-on-surface">ProfileLink</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm mb-space-md">La plateforme bio-link de nouvelle génération pour unifier votre présence numérique, vos analytics et vos conversions.</p><div class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container-high text-on-surface-variant font-code-sm text-code-sm"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>Tous les systèmes opérationnels</div></div><div><div class="font-label-md text-label-md text-on-surface mb-space-sm">Produit</div><ul class="flex flex-col gap-space-xs"><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface" data-path="fonctionnalites" href="#">Fonctionnalités</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface" data-path="exemples" href="#">Galerie de thèmes</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface" data-path="tarifs" href="#">Tarification</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface" data-path="changelog" href="#">Nouveautés</a></li></ul></div><div><div class="font-label-md text-label-md text-on-surface mb-space-sm">Ressources</div><ul class="flex flex-col gap-space-xs"><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface" data-path="centre-daide" href="#">Centre d'aide</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface" data-path="faq" href="#">FAQ</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface" data-path="blog" href="#">Guides créateurs</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface" data-path="api-docs" href="#">Documentation API</a></li></ul></div><div><div class="font-label-md text-label-md text-on-surface mb-space-sm">Légal &amp; Sécurité</div><ul class="flex flex-col gap-space-xs"><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface" data-path="confidentialite" href="#">Confidentialité</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface" data-path="conditions" href="#">Conditions d'utilisation</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface" data-path="mentions-legales" href="#">Mentions légales</a></li><li class="font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface" data-path="cookies" href="#">Gestion des cookies</a></li></ul></div></div><div class="pt-space-lg border-t border-outline-variant/30 flex flex-col sm:flex-row items-center justify-between gap-space-md"><p class="font-body-sm text-body-sm text-on-surface-variant">© 2024 ProfileLink Technologies Inc. Tous droits réservés.</p><p class="font-code-sm text-code-sm text-on-surface-variant">v2.4.0 • Statut: Opérationnel</p></div></div></footer></body></html>

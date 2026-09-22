@@ -1,0 +1,350 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+enum Plan {
+  FREE
+  PRO
+  TEAM
+}
+
+enum ProfileStatus {
+  DRAFT
+  PUBLISHED
+}
+
+enum NotificationType {
+  SYSTEM
+  WELCOME
+  PROFILE_PUBLISHED
+  PROFILE_CREATED
+  PROFILE_VIEW
+  QR_SCAN
+  LINK_CLICK
+  WEEKLY_DIGEST
+  PROFILE_INCOMPLETE
+  PLAN
+  PRODUCT
+}
+
+enum ContactMessageStatus {
+  NEW
+  READ
+  ARCHIVED
+}
+
+enum UnlockRequestStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+enum AuditLogCategory {
+  AUTH
+  SECURITY
+  ADMIN
+  CONTACT
+  PROFILE
+  BILLING
+  SYSTEM
+}
+
+enum AuditLogLevel {
+  INFO
+  WARN
+  ERROR
+}
+
+model User {
+  id                  String         @id @default(cuid())
+  email               String         @unique
+  passwordHash        String
+  name                String?
+  plan                Plan           @default(FREE)
+  role                Role           @default(USER)
+  notifyEmailAlerts   Boolean        @default(true)
+  notifyWeeklyDigest  Boolean        @default(true)
+  notifyProductTips   Boolean        @default(false)
+  /// Consecutive failed logins; reset on success or admin unlock.
+  failedLoginCount    Int            @default(0)
+  /// Set when the account is locked after too many failed logins.
+  lockedAt            DateTime?
+  createdAt           DateTime       @default(now())
+  updatedAt           DateTime       @updatedAt
+  profiles            Profile[]
+  sessions            Session[]
+  notifications       Notification[]
+  unlockRequests      UnlockRequest[]
+}
+
+model Session {
+  id        String   @id @default(cuid())
+  token     String   @unique
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+  @@index([expiresAt])
+}
+
+model Notification {
+  id        String           @id @default(cuid())
+  userId    String
+  user      User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type      NotificationType @default(SYSTEM)
+  title     String
+  body      String           @default("")
+  /// App-relative path only (e.g. /app/profils). Never store absolute URLs.
+  href      String?
+  readAt    DateTime?
+  meta      Json?
+  createdAt DateTime         @default(now())
+
+  @@index([userId, createdAt(sort: Desc)])
+  @@index([userId, readAt])
+}
+
+model Profile {
+  id           String        @id @default(cuid())
+  userId       String
+  user         User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  slug         String        @unique
+  firstName    String
+  lastName     String
+  title        String        @default("")
+  bio          String        @default("")
+  location     String        @default("")
+  email        String?
+  phone        String?
+  avatarUrl    String?
+  coverUrl     String?
+  theme        String        @default("executive")
+  accent       String        @default("primary")
+  status       ProfileStatus @default(DRAFT)
+  isPrimary    Boolean       @default(false)
+  indexed      Boolean       @default(true)
+  availability String?
+  views        Int           @default(0)
+  clicks       Int           @default(0)
+  qrScans      Int           @default(0)
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+
+  experiences    Experience[]
+  projects       Project[]
+  education      Education[]
+  certifications Certification[]
+  skills         Skill[]
+  links          SocialLink[]
+  interests      Interest[]
+  languages      Language[]
+
+  @@index([userId])
+  @@index([status])
+}
+
+model Experience {
+  id         String  @id @default(cuid())
+  profileId  String
+  profile    Profile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  title      String
+  company    String
+  location   String  @default("")
+  startDate  String
+  endDate    String?
+  current    Boolean @default(false)
+  highlights String  @default("")
+  sortOrder  Int     @default(0)
+
+  @@index([profileId])
+}
+
+model Project {
+  id          String  @id @default(cuid())
+  profileId   String
+  profile     Profile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  title       String
+  role        String  @default("")
+  description String  @default("")
+  url         String?
+  year        String  @default("")
+  tags        String  @default("")
+  sortOrder   Int     @default(0)
+
+  @@index([profileId])
+}
+
+model Education {
+  id        String  @id @default(cuid())
+  profileId String
+  profile   Profile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  degree    String
+  school    String
+  field     String  @default("")
+  year      String
+  note      String  @default("")
+  sortOrder Int     @default(0)
+
+  @@index([profileId])
+}
+
+model Certification {
+  id        String  @id @default(cuid())
+  profileId String
+  profile   Profile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  abbrev    String  @default("")
+  title     String
+  issuer    String  @default("")
+  status    String  @default("")
+  url       String?
+  sortOrder Int     @default(0)
+
+  @@index([profileId])
+}
+
+model Skill {
+  id        String  @id @default(cuid())
+  profileId String
+  profile   Profile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  label     String
+  tone      String  @default("secondary")
+  sortOrder Int     @default(0)
+
+  @@index([profileId])
+}
+
+model SocialLink {
+  id        String  @id @default(cuid())
+  profileId String
+  profile   Profile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  label     String
+  url       String
+  icon      String  @default("link")
+  visible   Boolean @default(true)
+  sortOrder Int     @default(0)
+
+  @@index([profileId])
+}
+
+model Interest {
+  id        String  @id @default(cuid())
+  profileId String
+  profile   Profile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  label     String
+  sortOrder Int     @default(0)
+
+  @@index([profileId])
+}
+
+model Language {
+  id        String  @id @default(cuid())
+  profileId String
+  profile   Profile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  label     String
+  level     String  @default("")
+  sortOrder Int     @default(0)
+
+  @@index([profileId])
+}
+
+model PlanOffer {
+  plan         Plan     @id
+  name         String
+  priceMonthly Float    @default(0)
+  updatedAt    DateTime @updatedAt
+}
+
+/// Catalog of profile visual templates (admin-managed).
+model ProfileTheme {
+  /// URL-safe slug used as Profile.theme (e.g. "executive").
+  id          String   @id
+  name        String
+  description String   @default("")
+  /// corporate | light | bold | night
+  mood        String   @default("corporate")
+  /// Tailwind classes for card / gallery cover gradient.
+  preview     String
+  accentDot   String   @default("bg-primary")
+  light       Boolean  @default(false)
+  enabled     Boolean  @default(true)
+  sortOrder   Int      @default(0)
+  /// Tailwind token map for marketing preview (shell, cover, card, …).
+  tokens      Json
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([enabled, sortOrder])
+}
+
+model ContactMessage {
+  id        String               @id @default(cuid())
+  name      String
+  email     String
+  subject   String
+  body      String
+  status    ContactMessageStatus @default(NEW)
+  locale    String?
+  readAt    DateTime?
+  createdAt DateTime             @default(now())
+  updatedAt DateTime             @updatedAt
+
+  @@index([status, createdAt(sort: Desc)])
+  @@index([createdAt(sort: Desc)])
+}
+
+model UnlockRequest {
+  id           String              @id @default(cuid())
+  userId       String
+  user         User                @relation(fields: [userId], references: [id], onDelete: Cascade)
+  message      String              @default("")
+  status       UnlockRequestStatus @default(PENDING)
+  reviewedAt   DateTime?
+  reviewedById String?
+  createdAt    DateTime            @default(now())
+  updatedAt    DateTime            @updatedAt
+
+  @@index([status, createdAt(sort: Desc)])
+  @@index([userId, status])
+}
+
+model AuditLog {
+  id          String           @id @default(cuid())
+  createdAt   DateTime         @default(now())
+  category    AuditLogCategory
+  level       AuditLogLevel    @default(INFO)
+  action      String
+  message     String
+  actorUserId String?
+  actorEmail  String?
+  actorRole   String?
+  targetType  String?
+  targetId    String?
+  ip          String?
+  userAgent   String?
+  country     String?
+  countryCode String?
+  region      String?
+  city        String?
+  path        String?
+  method      String?
+  statusCode  Int?
+  meta        Json?
+
+  @@index([createdAt(sort: Desc)])
+  @@index([category, createdAt(sort: Desc)])
+  @@index([action, createdAt(sort: Desc)])
+  @@index([actorUserId, createdAt(sort: Desc)])
+  @@index([ip, createdAt(sort: Desc)])
+}
