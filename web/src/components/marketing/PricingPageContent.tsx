@@ -160,13 +160,18 @@ export function PricingPageContent() {
               >
                 {plan.name}
               </h3>
-              <div className="flex items-baseline gap-1 mb-space-sm">
+              <div className="flex flex-wrap items-baseline gap-x-1.5 mb-space-sm">
                 <span className="text-headline-xl font-bold text-on-surface tabular-nums">
                   {plan.price}
                 </span>
                 {plan.period ? (
                   <span className="text-body-sm text-on-surface-variant">
                     {plan.period}
+                  </span>
+                ) : null}
+                {plan.id === "pro" ? (
+                  <span className="text-xs text-on-surface-variant">
+                    {t("marketing.pricing.proMonthlyHint")}
                   </span>
                 ) : null}
               </div>

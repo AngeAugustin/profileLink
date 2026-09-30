@@ -37,22 +37,7 @@ function HeroInner() {
 
       <section className="mx-auto w-full max-w-7xl px-gutter pb-12 pt-10 lg:pb-16 lg:pt-14">
         <div className="flex flex-col items-center text-center">
-          <div className="inline-flex items-center gap-2 rounded-full bg-surface-container-lowest px-4 py-1.5 shadow-sm">
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-40" />
-              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-primary" />
-            </span>
-            <span className="font-mono text-[13px] font-bold uppercase tracking-[0.05em] text-primary">
-              {t("marketing.hero.versionBadge")}
-            </span>
-            <span className="text-outline">•</span>
-            <span className="inline-flex items-center gap-1 text-label-sm font-semibold text-on-surface-variant">
-              <Icon name="auto_awesome" className="text-sm text-tertiary-container" />
-              {t("marketing.hero.eyebrow")}
-            </span>
-          </div>
-
-          <h1 className="mt-space-md max-w-4xl text-display-lg-mobile font-extrabold tracking-tight text-on-surface md:text-display-lg">
+          <h1 className="max-w-4xl text-display-lg-mobile font-extrabold tracking-tight text-on-surface md:text-display-lg">
             {t("marketing.hero.title1")}
             <br />
             <span className="bg-gradient-to-r from-primary-container via-primary to-primary-container bg-clip-text text-transparent">

@@ -86,8 +86,8 @@ export function MarketingFooter() {
             </a>
             . {t("marketing.footer.rightsReserved")}
           </p>
-          <p className="font-code-sm text-code-sm text-on-surface-variant">
-            {t("marketing.footer.version")}
+          <p className="font-body-sm text-body-sm text-on-surface-variant">
+            {t("marketing.footer.bottomNote")}
           </p>
         </div>
       </div>

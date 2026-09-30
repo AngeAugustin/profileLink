@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import { MarketingShell } from "@/components/marketing/MarketingShell";
 import { FeaturesHero } from "@/components/marketing/FeaturesHero";
 import { FeaturesCatalog } from "@/components/marketing/FeaturesCatalog";
-import { FinalCtaSection } from "@/components/landing/FinalCtaSection";
+import { FeaturesPillars } from "@/components/marketing/FeaturesPillars";
+import { FeaturesPhygital } from "@/components/marketing/FeaturesPhygital";
+import { FeaturesCompare } from "@/components/marketing/FeaturesCompare";
+import { FeaturesSecurity } from "@/components/marketing/FeaturesSecurity";
+import { FeaturesFaqCta } from "@/components/marketing/FeaturesFaqCta";
 import { getDictionary, t } from "@/i18n/get-dictionary";
 import { defaultLocale, isLocale, type Locale } from "@/i18n/config";
 
@@ -27,7 +31,11 @@ export default async function FeaturesPage() {
     <MarketingShell active="/fonctionnalites">
       <FeaturesHero />
       <FeaturesCatalog />
-      <FinalCtaSection />
+      <FeaturesPillars />
+      <FeaturesPhygital />
+      <FeaturesCompare />
+      <FeaturesSecurity />
+      <FeaturesFaqCta />
     </MarketingShell>
   );
 }

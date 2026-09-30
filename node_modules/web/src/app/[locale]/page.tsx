@@ -2,11 +2,8 @@ import type { Metadata } from "next";
 import { MarketingShell } from "@/components/marketing/MarketingShell";
 import { HeroSection } from "@/components/landing/HeroSection";
 import { ProcessSection } from "@/components/landing/ProcessSection";
-import { ComparisonBentoSection } from "@/components/landing/ComparisonBentoSection";
-import {
-  PersonasSection,
-  TouchpointsSection,
-} from "@/components/landing/MoreSections";
+import { TouchpointsSection } from "@/components/landing/MoreSections";
+import { PersonasSection } from "@/components/landing/PersonasSection";
 import { PricingSection } from "@/components/landing/PricingSection";
 import { FaqSection } from "@/components/landing/FaqSection";
 import { FinalCtaSection } from "@/components/landing/FinalCtaSection";
@@ -32,7 +29,6 @@ export default function HomePage() {
     <MarketingShell active="/">
       <HeroSection />
       <ProcessSection />
-      <ComparisonBentoSection />
       <TouchpointsSection />
       <PersonasSection />
       <PricingSection />

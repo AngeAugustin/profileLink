@@ -73,7 +73,7 @@ const fr = {
       legalNotice: "Mentions légales",
       cookies: "Gestion des cookies",
       rightsReserved: "Tous droits réservés.",
-      version: "v2.4.0 • Statut: Opérationnel",
+      bottomNote: "Un profil. Un lien. Un QR code.",
     },
     hero: {
       eyebrow: "La nouvelle référence du profil pro • QR Code & lien unique instantanés",
@@ -734,7 +734,7 @@ const en: typeof fr = {
       legalNotice: "Legal notice",
       cookies: "Cookie settings",
       rightsReserved: "All rights reserved.",
-      version: "v2.4.0 • Status: Operational",
+      bottomNote: "One profile. One link. One QR code.",
     },
     hero: {
       eyebrow: "The new standard for pro profiles • Instant QR code & unique link",

@@ -115,7 +115,12 @@ export async function middleware(request: NextRequest) {
     return res;
   }
 
-  if ((bare === "/connexion" || bare === "/inscription") && validSession) {
+  if (
+    (bare === "/connexion" ||
+      bare === "/inscription" ||
+      bare === "/mot-de-passe-oublie") &&
+    validSession
+  ) {
     const url = request.nextUrl.clone();
     url.pathname = `/${localeInPath}/app`;
     return NextResponse.redirect(url);
