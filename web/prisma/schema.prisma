@@ -66,26 +66,25 @@ enum AuditLogLevel {
 }
 
 model User {
-  id                 String          @id @default(cuid())
-  email              String          @unique
-  passwordHash       String
-  name               String?
-  plan               Plan            @default(FREE)
-  role               Role            @default(USER)
-  notifyEmailAlerts  Boolean         @default(true)
-  notifyWeeklyDigest Boolean         @default(true)
-  notifyProductTips  Boolean         @default(false)
+  id                  String         @id @default(cuid())
+  email               String         @unique
+  passwordHash        String
+  name                String?
+  plan                Plan           @default(FREE)
+  role                Role           @default(USER)
+  notifyEmailAlerts   Boolean        @default(true)
+  notifyWeeklyDigest  Boolean        @default(true)
+  notifyProductTips   Boolean        @default(false)
   /// Consecutive failed logins; reset on success or admin unlock.
-  failedLoginCount   Int             @default(0)
+  failedLoginCount    Int            @default(0)
   /// Set when the account is locked after too many failed logins.
-  lockedAt           DateTime?
-  createdAt          DateTime        @default(now())
-  updatedAt          DateTime        @updatedAt
-  profiles           Profile[]
-  sessions           Session[]
-  notifications      Notification[]
-  unlockRequests     UnlockRequest[]
-  qrCodes            QrCode[]
+  lockedAt            DateTime?
+  createdAt           DateTime       @default(now())
+  updatedAt           DateTime       @updatedAt
+  profiles            Profile[]
+  sessions            Session[]
+  notifications       Notification[]
+  unlockRequests      UnlockRequest[]
 }
 
 model Session {
@@ -348,38 +347,4 @@ model AuditLog {
   @@index([action, createdAt(sort: Desc)])
   @@index([actorUserId, createdAt(sort: Desc)])
   @@index([ip, createdAt(sort: Desc)])
-}
-
-/// Standalone QR code created in the QR studio (any link, not only profiles).
-model QrCode {
-  id          String   @id @default(cuid())
-  userId      String
-  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  name        String
-  destination String
-  /// Dynamic codes encode /r/{code} and redirect, so the destination can change after printing.
-  dynamic     Boolean  @default(false)
-  /// Short code used in /r/{code}.
-  code        String   @unique
-  /// QrStyle (see src/lib/qr-style.ts).
-  style       Json
-  scans       Int      @default(0)
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-  scanEvents  QrScan[]
-
-  @@index([userId, updatedAt(sort: Desc)])
-}
-
-model QrScan {
-  id        String   @id @default(cuid())
-  qrCodeId  String
-  qrCode    QrCode   @relation(fields: [qrCodeId], references: [id], onDelete: Cascade)
-  /// ios | android | desktop | other
-  device    String   @default("other")
-  country   String?
-  city      String?
-  createdAt DateTime @default(now())
-
-  @@index([qrCodeId, createdAt(sort: Desc)])
 }

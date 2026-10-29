@@ -14,7 +14,6 @@ export function MarketingFooter() {
       links: [
         { href: "/fonctionnalites", label: t("marketing.footer.features") },
         { href: "/themes", label: t("marketing.footer.themes") },
-        { href: "/generateur-qr", label: t("marketing.footer.qrGenerator") },
         { href: "/tarifs", label: t("marketing.footer.pricing") },
       ],
     },

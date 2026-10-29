@@ -19,9 +19,7 @@ export type ApiErrorKey =
   | "api.unlockRequestPending"
   | "api.themeIdTaken"
   | "api.themeInUse"
-  | "api.themeBuiltin"
-  | "api.qrNotFound"
-  | "api.dynamicQrPro";
+  | "api.themeBuiltin";
 
 export async function resolveApiLocale(): Promise<Locale> {
   const store = await cookies();
