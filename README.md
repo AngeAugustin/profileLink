@@ -45,8 +45,20 @@ npm run dev
 - `/connexion`, `/inscription`
 - `/app` — Dashboard
 - `/app/profils`, `/app/profils/[id]` — Liste & éditeur
+- `/app/qr-codes`, `/app/qr-codes/nouveau`, `/app/qr-codes/[id]` — QR codes personnalisés (liste, statistiques, studio)
 - `/app/statistiques`, `/app/parametres`, `/app/aide`
 - `/p/[slug]` — **Profil public** (QR + partage)
+- `/generateur-qr` — Générateur de QR codes public (sans compte, export SVG/PNG)
+- `/r/[code]` — Redirection des QR dynamiques (compte le scan puis redirige)
 - `/admin` — Back-office
 
-Maquettes HTML de référence : `stitch-export/`.
+Maquettes HTML de référence : `stitch-export/` et `maquettes/trame-qr.html` (studio QR).
+
+## Studio QR code
+
+Tout lien peut devenir un QR code personnalisé : 12 modèles, 7 formes de modules, coins, couleurs et dégradés, logo (icône, initiales ou image importée), cadre avec texte, et un score de lisibilité. Le rendu (`web/src/lib/qr-style.ts`) est le même côté navigateur et côté serveur.
+
+- **Statique** : le lien est inscrit dans le motif. Disponible pour tous, sans compte sur `/generateur-qr`.
+- **Dynamique** (Pro et Équipe) : le QR encode `/r/{code}`. La destination reste modifiable après impression et chaque scan est compté (jour, appareil, ville).
+
+Après mise à jour, appliquez le schéma : `npm run db:migrate` (ou `npm run db:push` si votre base a été créée avec `db push`).

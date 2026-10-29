@@ -881,6 +881,7 @@ export function EditorView({ profileId, profileMeta }: EditorViewProps) {
                       id: String(Date.now()),
                       title: t("app.editor.newJob"),
                       company: "",
+                      location: "",
                       period: "",
                       current: false,
                       highlights: "",

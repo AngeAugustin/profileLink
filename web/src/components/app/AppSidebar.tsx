@@ -38,6 +38,7 @@ export function AppSidebar() {
   const nav = [
     { href: "/app", label: t("app.nav.dashboard"), icon: "grid_view" },
     { href: "/app/profils", label: t("app.nav.profiles"), icon: "account_box" },
+    { href: "/app/qr-codes", label: t("app.nav.qrCodes"), icon: "qr_code_2" },
     { href: "/app/statistiques", label: t("app.nav.stats"), icon: "insights" },
     { href: "/app/parametres", label: t("app.nav.settings"), icon: "settings" },
     { href: "/app/aide", label: t("app.nav.help"), icon: "help" },

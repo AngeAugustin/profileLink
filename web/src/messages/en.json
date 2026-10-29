@@ -52,7 +52,8 @@
       "privacyTitle": "Privacy policy",
       "termsTitle": "Terms of use",
       "legalNoticeTitle": "Legal notice",
-      "cookiesTitle": "Cookie settings"
+      "cookiesTitle": "Cookie settings",
+      "qrGeneratorTitle": "Custom QR code generator"
     },
     "header": {
       "product": "Product",
@@ -63,7 +64,8 @@
       "contact": "Contact",
       "faq": "FAQ",
       "login": "Log in",
-      "cta": "Create my profile"
+      "cta": "Create my profile",
+      "qrGenerator": "QR generator"
     },
     "footer": {
       "tagline": "The next-generation bio-link platform to unify your digital presence, analytics, and conversions.",
@@ -82,7 +84,8 @@
       "legalNotice": "Legal notice",
       "cookies": "Cookie settings",
       "rightsReserved": "All rights reserved.",
-      "bottomNote": "One profile. One link. One QR code."
+      "bottomNote": "One profile. One link. One QR code.",
+      "qrGenerator": "QR code generator"
     },
     "hero": {
       "versionBadge": "New version 2.4",
@@ -607,7 +610,8 @@
       "e5Blurb": "Clean student profile: education, internships, and a QR for career fairs.",
       "e6Blurb": "Freelance hat: offers, indicative rates, and social proof.",
       "alreadyAccount": "Already have an account?",
-      "createOwn": "Create your own example"
+      "createOwn": "Create your own example",
+      "filterAllLegacy": "All"
     },
     "contact": {
       "eyebrow": "Contact",
@@ -917,6 +921,21 @@
         "badge": "Resources",
         "navLabel": "Resources"
       }
+    },
+    "qrGenerator": {
+      "eyebrow": "QR code generator",
+      "title": "One link.",
+      "titleAccent": "A QR code that looks like you.",
+      "subtitle": "Paste any address, pick a template, then fine-tune every detail: modules, corners, colors, logo and frame. The readability score checks that every phone can read it.",
+      "reassure1": "Free, no sign-up",
+      "reassure2": "SVG and PNG export up to 4K",
+      "reassure3": "Readability check",
+      "galleryTitle": "12 templates to start from",
+      "gallerySubtitle": "Each template shows your link. Everything stays customizable.",
+      "saveTitle": "Keep your QR codes and change their destination anytime",
+      "saveBody": "With an account, save your QR codes, make them dynamic and track every scan by day, device and city.",
+      "saveCta": "Create a free account",
+      "defaultUrl": "https://profilelink.me"
     }
   },
   "auth": {
@@ -1023,6 +1042,7 @@
     "nav": {
       "dashboard": "Dashboard",
       "profiles": "My profiles",
+      "qrCodes": "QR codes",
       "create": "Create a profile",
       "stats": "Analytics",
       "account": "My account",
@@ -1379,6 +1399,228 @@
       "needHuman": "Need a human?",
       "sla": "Our team replies within 1 business day.",
       "contact": "Contact support"
+    },
+    "qrStudio": {
+      "tabs": {
+        "content": "Content",
+        "pattern": "Pattern",
+        "corners": "Corners",
+        "colors": "Colors",
+        "logo": "Logo",
+        "frame": "Frame"
+      },
+      "content": {
+        "title": "Content",
+        "name": "QR code name",
+        "namePh": "e.g. Restaurant menu",
+        "destination": "Destination link",
+        "destinationPh": "https://your-link.com",
+        "invalidUrl": "Enter a full address starting with https://",
+        "dynamic": "Dynamic QR",
+        "dynamicHint": "Change the destination after printing and track scans.",
+        "dynamicPro": "Available on Pro and Team plans.",
+        "dynamicPublic": "Create an account to make your QR codes dynamic.",
+        "encoded": "Encoded link",
+        "encodedPending": "The short link is assigned when you save.",
+        "ecl": "Error correction",
+        "eclHint": "Higher levels survive logos and scratches better, and add more modules."
+      },
+      "pattern": {
+        "title": "Module pattern",
+        "hint": "The shape of each small square in the code. The three corners are set under “Corners”.",
+        "shapes": {
+          "square": "Square",
+          "rounded": "Fluid",
+          "dots": "Dots",
+          "classy": "Classy",
+          "soft": "Soft",
+          "diamond": "Diamond",
+          "bars": "Bars"
+        }
+      },
+      "corners": {
+        "title": "Corners",
+        "frame": "Corner frame",
+        "center": "Corner center",
+        "custom": "Separate color for corners",
+        "shapes": {
+          "square": "Square",
+          "rounded": "Rounded",
+          "circle": "Round",
+          "diamond": "Diamond",
+          "leaf": "Leaf"
+        }
+      },
+      "colors": {
+        "title": "Colors",
+        "fg": "Foreground",
+        "gradient": "Gradient",
+        "second": "Second color",
+        "linear": "Linear",
+        "radial": "Radial",
+        "bg": "Background",
+        "transparent": "Transparent background",
+        "cornerColor": "Corner color"
+      },
+      "logo": {
+        "title": "Center logo",
+        "kinds": {
+          "none": "None",
+          "link": "Link",
+          "fork": "Restaurant",
+          "pin": "Address",
+          "camera": "Photo",
+          "mono": "Initials",
+          "image": "Image"
+        },
+        "initials": "Initials",
+        "upload": "Upload a logo",
+        "uploadHint": "PNG, JPG, WebP or SVG, 200 KB max.",
+        "replace": "Replace image",
+        "tooLarge": "Image too large: 200 KB max.",
+        "badType": "Unsupported format. Use PNG, JPG, WebP or SVG.",
+        "size": "Logo size · {value}%",
+        "eclRaised": "Logo uploaded. Error correction set to H to stay readable."
+      },
+      "frame": {
+        "title": "Frame and margins",
+        "kinds": {
+          "none": "None",
+          "label": "Label",
+          "bubble": "Bubble",
+          "ticket": "Ticket"
+        },
+        "text": "Frame text",
+        "margin": "Quiet zone · {value} modules",
+        "marginHint": "The empty margin around the code. The standard recommends 4 modules."
+      },
+      "specs": {
+        "version": "Version",
+        "modules": "Modules",
+        "ecl": "Correction",
+        "minSize": "Min. size"
+      },
+      "scan": {
+        "title": "Readability",
+        "grades": {
+          "excellent": "Excellent",
+          "fair": "Fair",
+          "risky": "Risky"
+        },
+        "outOf": "score out of 100",
+        "contrastLow": "Contrast too low ({ratio}:1). Aim for at least 4:1.",
+        "contrastFair": "Borderline contrast ({ratio}:1). Darken the pattern or lighten the background.",
+        "contrastGood": "Contrast {ratio}:1, very good.",
+        "inverted": "Inverted colors: some older readers only read dark on light.",
+        "logoEcl": "The logo hides modules. Raise error correction to Q or H.",
+        "logoLarge": "Large logo: test a scan before printing.",
+        "logoOk": "Logo fits the error correction level.",
+        "marginLow": "Quiet zone too narrow. Keep at least 2 modules.",
+        "marginFair": "Reduced quiet zone. 4 modules is ideal.",
+        "marginGood": "Quiet zone meets the standard."
+      },
+      "templates": {
+        "title": "Templates",
+        "quick": "Quick templates",
+        "apply": "Apply the {name} template",
+        "applied": "“{name}” template applied.",
+        "use": "Use this template",
+        "names": {
+          "classic": "Classic",
+          "pearl": "Pearl",
+          "brand": "ProfileLink",
+          "bauhaus": "Bauhaus",
+          "midnight": "Midnight",
+          "coral": "Coral",
+          "lagoon": "Lagoon",
+          "sakura": "Sakura",
+          "graphite": "Graphite",
+          "neon": "Neon",
+          "kraft": "Kraft",
+          "label": "Label"
+        }
+      },
+      "categories": {
+        "all": "All",
+        "minimal": "Minimal",
+        "gradient": "Gradient",
+        "color": "Colorful",
+        "dark": "Dark",
+        "framed": "Framed"
+      },
+      "export": {
+        "title": "Export",
+        "format": "Format",
+        "size": "Size",
+        "sizes": {
+          "1024": "1,024 px · web",
+          "2048": "2,048 px · flyer",
+          "4096": "4,096 px · poster"
+        },
+        "download": "Download",
+        "copySvg": "Copy SVG code",
+        "copied": "SVG code copied.",
+        "copyFailed": "Copy failed. Download the SVG file instead.",
+        "downloaded": "{format} file downloaded.",
+        "failed": "Export failed. Try another format."
+      },
+      "reset": "Reset",
+      "resetDone": "Style reset.",
+      "save": "Save",
+      "saving": "Saving…",
+      "saved": "QR code saved.",
+      "create": "Create QR code",
+      "previewAlt": "QR code preview"
+    },
+    "qrCodes": {
+      "title": "QR codes",
+      "subtitle": "Turn any link into a QR code that looks like you, and track its scans.",
+      "create": "New QR code",
+      "loading": "Loading your QR codes…",
+      "errorLoad": "Could not load your QR codes.",
+      "emptyTitle": "No QR codes yet",
+      "emptyBody": "Paste a link, pick a template and fine-tune every detail.",
+      "emptyCta": "Create my first QR code",
+      "kpiScans": "Scans · 30 days",
+      "kpiCodes": "QR codes",
+      "kpiCodesDetail": "{dynamic} dynamic · {static} static",
+      "kpiTop": "Most scanned",
+      "kpiTopNone": "No scans yet",
+      "colName": "Name and destination",
+      "colType": "Type",
+      "colScans": "Scans · 14 d",
+      "dynamic": "Dynamic",
+      "static": "Static",
+      "destination": "Destination",
+      "update": "Update",
+      "updated": "Destination updated. The printed QR now redirects to {url}",
+      "dynamicNote": "The printed QR stays the same. Only the redirect changes.",
+      "staticNote": "Static QR: the destination is encoded in the pattern. Recreate it as dynamic to change it.",
+      "daily": "Scans per day",
+      "last30": "over 30 days",
+      "lastWeek": "Last 7 days in solid color",
+      "devices": "Devices",
+      "cities": "Cities",
+      "noData": "No scans yet.",
+      "staticNoStats": "Static QR codes lead straight to the destination, so their scans cannot be counted.",
+      "deviceNames": {
+        "ios": "iPhone",
+        "android": "Android",
+        "desktop": "Computer",
+        "other": "Other"
+      },
+      "editStyle": "Edit style",
+      "delete": "Delete",
+      "deleteTitle": "Delete this QR code?",
+      "deleteBody": "A dynamic QR that is already printed will stop redirecting.",
+      "deleted": "QR code deleted.",
+      "modified": "edited {date}",
+      "copyShort": "Copy short link",
+      "copiedShort": "Short link copied.",
+      "newTitle": "New QR code",
+      "editTitle": "Edit QR code",
+      "back": "Back to QR codes",
+      "notFound": "This QR code could not be found."
     }
   },
   "public": {
@@ -1684,7 +1926,9 @@
     "unlockRequestPending": "A review request is already pending for this account.",
     "themeIdTaken": "This template id already exists.",
     "themeInUse": "This template is used by profiles — disable it instead.",
-    "themeBuiltin": "Built-in templates cannot be deleted."
+    "themeBuiltin": "Built-in templates cannot be deleted.",
+    "qrNotFound": "QR code not found.",
+    "dynamicQrPro": "Dynamic QR codes are available on Pro and Team plans."
   },
   "notFound": {
     "title": "Page not found",

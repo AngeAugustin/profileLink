@@ -21,6 +21,7 @@ export function MarketingHeader({ active = "/" }: MarketingHeaderProps) {
     { href: "/fonctionnalites", label: t("marketing.header.features") },
     { href: "/exemples", label: t("marketing.header.examples") },
     { href: "/themes", label: t("marketing.header.themes") },
+    { href: "/generateur-qr", label: t("marketing.header.qrGenerator") },
     { href: "/tarifs", label: t("marketing.header.pricing") },
     { href: "/contact", label: t("marketing.header.contact") },
   ];
